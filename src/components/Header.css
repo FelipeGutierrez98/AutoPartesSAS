@@ -1,0 +1,78 @@
+.navBar{
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  font-family: 'Permanent Marker', cursive;
+  list-style: none;
+  background-color: #ffffff;
+}
+.links{
+  width: 70%;
+  display: flex;
+  color: #1f376c;
+align-items: center;
+gap: 20px;
+font-size: 25px;
+
+}
+.cotiza {
+  color: #ffffff !important;
+  background-color: #1f376c;
+  border: 1px solid #ef3f3f;
+  height: 60px;
+  width: 120px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Asegura que el cursor cambie al pasar sobre el botón */
+  transition: all 0.3s ease; /* Agrega una transición suave a todos los cambios */
+}
+
+.cotiza:hover {
+  color: #fff !important;
+  background-color: #1f376c;
+  transform: scale(1.1); /* Escala el botón al 110% */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra al botón */
+}
+
+
+/* Define la animación */
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Escala normal */
+  }
+  50% {
+    transform: scale(1.1); /* Escala al 110% */
+  }
+  100% {
+    transform: scale(1); /* Vuelve a la escala normal */
+  }
+}
+
+
+
+.containerImagen{
+  width: 30%;
+}
+.imagen{
+  display: flex;
+  width: 200px;
+}
+.logo{
+  height: 100px;
+  
+}
+
+/* .img{
+    background-image: url('../src//assets//camion.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 600px; 
+    width: 200px; 
+    position: absolute; 
+    z-index: 1;
+   } 
+ */

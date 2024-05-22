@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <script src="https://cdn-shared.altium.com/production/altium-user/index.min.js"></script>
+    <meta charset="utf-8" />
+<style>/* @see https://github.com/aFarkas/lazysizes#broken-image-symbol */.js img.lazyload:not([src]) { visibility: hidden; }/* @see https://github.com/aFarkas/lazysizes#automatically-setting-the-sizes-attribute */.js img.lazyloaded[data-sizes=auto] { display: block; width: 100%; }/* Transition effect. */.js .lazyload, .js .lazyloading { opacity: 0; }.js .lazyloaded { opacity: 1; -webkit-transition: opacity 2000ms; transition: opacity 2000ms; }</style>
+<meta name="description" content="Conoce las herramientas de Altium Designer para el diseño de sistemas telemáticos automotrices, que incluyen modelos de PCB para lo más novedoso del sector." />
+<meta name="abstract" content="Conoce las herramientas de Altium Designer para el diseño de sistemas telemáticos automotrices, que incluyen modelos de PCB para lo más novedoso del sector." />
+<meta name="keywords" content="Diseño de PCB" />
+<link rel="canonical" href="https://resources.altium.com/es/p/automotive-telematics-system-design" />
+<meta name="robots" content="index, follow" />
+<link rel="image_src" href="https://resources.altium.com/sites/default/files/blogs/Automotive%20Telematics%20System%20Design-67421.jpg" />
+<meta property="og:site_name" content="Altium" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://resources.altium.com/es/p/automotive-telematics-system-design" />
+<meta property="og:title" content="Diseño de sistemas telemáticos automotrices" />
+<meta property="og:description" content="En 2015 el coste de la electrónica en un vehículo nuevo superaba por primera vez en la historia el coste del acero en bruto. No debería sorprendernos; el aumento continuo del número de sistemas electrónicos que se instalan en los vehículos hace que este cambio en la estructura de costes fuese inevitable." />
+<meta property="og:image:url" content="https://resources.altium.com/sites/default/files/styles/opengraph/public/blogs/Automotive%20Telematics%20System%20Design-67421.jpg?itok=qYirDlVN" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="725" />
+<meta property="og:image:alt" content="Se espera un gran crecimiento de los ingresos derivados del diseño de PCB para sistemas telemáticos automotrices" />
+<meta property="og:updated_time" content="2024-03-23" />
+<meta property="article:published_time" content="2019-09-05" />
+<meta property="article:modified_time" content="2024-03-23" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="En 2015 el coste de la electrónica en un vehículo nuevo superaba por primera vez en la historia el coste del acero en bruto. No debería sorprendernos; el aumento continuo del número de sistemas electrónicos que se instalan en los vehículos hace que este cambio en la estructura de costes fuese inevitable." />
+<meta name="twitter:site" content="@altium" />
+<meta name="twitter:title" content="Diseño de sistemas telemáticos automotrices" />
+<meta name="twitter:site:id" content="38044199" />
+<meta name="twitter:url" content="https://resources.altium.com/es/p/automotive-telematics-system-design" />
+<meta name="twitter:image" content="https://resources.altium.com/sites/default/files/blogs/Automotive%20Telematics%20System%20Design-67421.jpg" />
+<meta name="twitter:image:alt" content="Se espera un gran crecimiento de los ingresos derivados del diseño de PCB para sistemas telemáticos automotrices" />
+<meta name="sentry-trace" content="8c62b201d74347929104e037d11cd379-c6985688d97346f8" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'tagList','tagSlugs': 'altium-designer|high-speed-design|pcb-design|simulation-and-analysis|technology|thought-leadership'});</script>
+<script data-ot-ignore="" type="text/javascript" src="/modules/custom/altium_onetrust/js/altium_onetrust.js" class="optanon-category-C0001"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  
+  gtag('consent', 'default', {
+    'analytics_storage': 'granted',
+    'ad_storage': 'granted',
+    'functionality_storage': 'granted',
+    'personalization_storage': 'granted',
+    'security_storage': 'granted', 
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'region': ['US']
+  });
+
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5LFC7W');</script>
+<!-- End Google Tag Manager -->
+
+<script src="https://cdn.cookielaw.org/consent/043a2c97-19b3-47d5-a965-246500b3e006/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="043a2c97-19b3-47d5-a965-246500b3e006" ></script>
+<script src="https://cdn-shared.altium.com/production/onetrust/onetrust.js" type="text/javascript"></script>
+<!--
+<PageMap>
+  <DataObject type="document">
+    <Attribute name="space">resources</Attribute>
+  </DataObject>
+</PageMap>
+-->
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "headline": "Diseño de sistemas telemáticos automotrices",
+            "name": "Diseño de sistemas telemáticos automotrices",
+            "about": [
+                "Diseño de alta velocidad",
+                "Simulación",
+                "Altium Designer"
+            ],
+            "description": "En 2015 el coste de la electrónica en un vehículo nuevo superaba por primera vez en la historia el coste del acero en bruto. No debería sorprendernos; el aumento continuo del número de sistemas electrónicos que se instalan en los vehículos hace que este cambio en la estructura de costes fuese inevitable.",
+            "image": {
+                "@type": "ImageObject",
+                "representativeOfPage": "False",
+                "url": "https://resources.altium.com/sites/default/files/blogs/Automotive%20Telematics%20System%20Design-67421.jpg"
+            },
+            "datePublished": "2019-09-05",
+            "dateModified": "2024-03-23",
+            "isAccessibleForFree": "True",
+            "author": {
+                "@type": "Person",
+                "@id": "https://resources.altium.com/es/experts/zachariah-peterson",
+                "name": "Zachariah Peterson",
+                "url": "https://resources.altium.com/es/experts/zachariah-peterson",
+                "logo": {
+                    "@type": "ImageObject",
+                    "representativeOfPage": "True",
+                    "url": "https://resources.altium.com/sites/default/files/styles/max_width_2600/public/user_pictures/headshot-small-350.jpg?itok=jOI_Tmrt",
+                    "width": "351",
+                    "height": "351"
+                }
+            },
+            "publisher": {
+                "@type": "Corporation",
+                "@id": "https://www.altium.com",
+                "name": "Altium Limited",
+                "url": "https://www.altium.com",
+                "sameAs": "https://en.wikipedia.org/wiki/Altium",
+                "logo": {
+                    "@type": "ImageObject",
+                    "representativeOfPage": "False",
+                    "url": "https://www.altium.com/sites/all/themes/altium/logo.png"
+                }
+            },
+            "mainEntityOfPage": "https://resources.altium.com/es/p/automotive-telematics-system-design"
+        }
+    ]
+}</script>
+<link rel="icon" href="/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://resources.altium.com/p/automotive-telematics-system-design" />
+<link rel="alternate" hreflang="de" href="https://resources.altium.com/de/p/automotive-telematics-system-design" />
+<link rel="alternate" hreflang="es" href="https://resources.altium.com/es/p/automotive-telematics-system-design" />
+<link rel="alternate" hreflang="fr" href="https://resources.altium.com/fr/p/automotive-telematics-system-design" />
+<link rel="alternate" hreflang="it" href="https://resources.altium.com/it/p/automotive-telematics-system-design" />
+<link rel="alternate" hreflang="pl" href="https://resources.altium.com/pl/p/automotive-telematics-system-design" />
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+    <meta name="naver-site-verification" content="navera58d64f263d7a5cd264aceb5054727f4" />
+    <script src="https://cdn.optimizely.com/js/16602720088.js" type="text/plain" class="optanon-category-C0002"></script>
+    <script type="text/plain" class="optanon-category-C0002" src="//cdn.bizible.com/scripts/bizible.js" async=""></script>
+
+    <title>Diseño de un sistema telemático automotriz | Altium</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_UrkstZWkzrHZTlXfCn8vjZGz557nPqY-cDPDmN_WfWk.css?delta=0&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY" />
+<link rel="stylesheet" media="all" href="https://cdn-shared.altium.com/production/navigation_new/dist/css/header.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_nMbd5KalPCd5gTJa_vRDHwPoEu2RXq5WMb78AaxsJwQ.css?delta=2&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_h0jB45m_W03FgVBTZECgLh0gWBv8Q6KYjdpjC59c-hg.css?delta=3&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY" />
+<link rel="stylesheet" media="all" href="https://cdn-shared.altium.com/production/wds/dist/components/wds-typography-inside/wds-typography-inside.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_UBgRdnbUUpTOMdzHpGGtb5iBFgjTQjBK-ZFdFJC7DJk.css?delta=5&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY" />
+<link rel="stylesheet" media="all" href="https://cdn-shared.altium.com/production/altium-all-pages/dist/components/bCountdown/bCountdown.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn-shared.altium.com/production/wds/dist/components/wds-global/wds-global.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn-shared.altium.com/production/wds/dist/components/wds-btn/wds-btn.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn-shared.altium.com/development/wds/dist/components/wds-formV2/wds-formV2.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn-shared.altium.com/development/wds/dist/components/wds-loader/wds-loader.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn-shared.altium.com/development/wds/dist/components/wds-sticky/wds-sticky.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn-shared.altium.com/production/wds/dist/components/wds-sticky-v2/wds-sticky-v2.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_f7Gophcs2E3h73lMldzCoSKitfEHys_S0p_Veuj8qUI.css?delta=13&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"es\/","currentPath":"node\/558673596","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"es"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJyNkN2S2yAMhV8IWzd9H0YgraMEAyuBt96nXxLHm3bazvRGc_jQz5GQqBXMO-BTzG9acnOYmvQVllQCpsnaniQvJ92EdlSath9P4pE2OOQ05N_pFDDeONMUS89Nhe3Mi9czLV6_2XDBufmAObPC789_JJkQB1T_IbTwuYMnXA2qFjpBxk0WbFKyD6nEm8GFkV5dc7AKv-iT2wWV6dFqxpR8xeW1g_XKalGlNvgTucCtsXr-WYsx-TdJ42mw8PCNycWEZjsEND71ymaPATHJ2PG-m98wCR3Or--ddYe4zYeax21JWtH_zX_-jXnPI2If9T52a2WF9y7xdqCRoAy56DoqPtkd3iFivTd2CT93uAdXUXFRrBcD0l4xzS8y91x7SGIXJqe4cYZHdNaGP2sSv4texNlujdfjLJvwh8EjzmuhnvgLfowUhg","theme":"altium","theme_token":null},"ajaxTrustedUrl":{"https:\/\/www.altium.com\/es\/search":true},"altiumNbsp":{"names":["Altium\u00a0365","Altium 365\u2019s","Altium\u00a0Designer","Altium\u00a0Enterprise","IHS\u00a0Markit","Assembly\u00a0Assistant","BOM\u00a0Manager","Siemens\u00a0NX\u2122"],"tags":["p","h1","h2","h3","h4","h5","h6","li","td","th","div","span"]},"altium_raven":{"ip":"186.154.35.223"},"raven":{"options":{"ignoreErrors":["SecurityError: Failed to read the \u0027contentDocument\u0027 property from \u0027HTMLIFrameElement\u0027: Blocked a frame with origin \\\u0022https:\/\/resources.altium.com\\\u0022 from accessing a cross-origin frame.","NetworkError: Failed to execute \u0027send\u0027 on \u0027XMLHttpRequest\u0027: Failed to load \u0027https:\/\/www.altium.com\/altium-cj\/event\u0027.","Unexpected token .","TypeError: Failed to fetch","MktoForms2 is not defined","Step attribute on input type time is not supported.","TypeError: Cannot read properties of null (reading \u0027error\u0027)"],"dsn":"https:\/\/c9f4b3bed7194b578b55114438ea1a97@o406350.ingest.sentry.io\/5303576","environment":"PROD","integrations":[],"autoSessionTracking":false,"sendClientReports":false},"showReportDialog":false},"clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":false,"messages":{"required":"This field is required.","remote":"Please fix this field.","email":"Please enter a valid email address.","url":"Please enter a valid URL.","date":"Please enter a valid date.","dateISO":"Please enter a valid date (ISO).","number":"Please enter a valid number.","digits":"Please enter only digits.","equalTo":"Please enter the same value again.","maxlength":"Please enter no more than {0} characters.","minlength":"Please enter at least {0} characters.","rangelength":"Please enter a value between {0} and {1} characters long.","range":"Please enter a value between {0} and {1}.","max":"Please enter a value less than or equal to {0}.","min":"Please enter a value greater than or equal to {0}.","step":"Please enter a multiple of {0}."}},"lazy":{"lazysizes":{"lazyClass":"lazyload","loadedClass":"lazyloaded","loadingClass":"lazyloading","preloadClass":"lazypreload","errorClass":"lazyerror","autosizesClass":"lazyautosizes","srcAttr":"data-src","srcsetAttr":"data-srcset","sizesAttr":"data-sizes","minSize":40,"customMedia":[],"init":true,"expFactor":1.5,"hFac":0.8,"loadMode":2,"loadHidden":true,"ricTimeout":0,"throttleDelay":125,"plugins":[]},"placeholderSrc":"data:image\/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==","preferNative":false,"minified":true,"libraryPath":"\/libraries\/lazysizes"},"statistics":{"data":{"nid":"558673596"},"url":"\/core\/modules\/statistics\/statistics.php"},"quickAudit":{"nid":"558673596","langcode":"es","type":"blogs"},"user":{"uid":0,"permissionsHash":"0d182e52fec1824f8a0faed52a063ff93c8b15b0e6e948c6e853abd42dabcc58"}}</script>
+<script src="/sites/default/files/js/js_uiBWAldoL9EypLJ0NCkafNX36rlzDArwzF3FrpM0GbA.js?scope=header&amp;delta=0&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY"></script>
+<script src="//go.altium.com/js/forms2/js/forms2.min.js"></script>
+<script src="//play.vidyard.com/embed/v4.js"></script>
+<script src="/sites/default/files/js/js_4TSCL4nSOxWXTqKanhLS-mVVCwPrYgcbd8oYbOxrXIk.js?scope=header&amp;delta=3&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY"></script>
+
+    <script type="text/plain" class="optanon-category-C0002">
+      (function() {
+        var didInit = false;
+        function initMunchkin() {
+          if(didInit === false) {
+            didInit = true;
+            if (window.Munchkin && typeof window.Munchkin !== 'undefined') {
+              Munchkin.init('817-SFW-071');
+            }
+          }
+        }
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//munchkin.marketo.net/munchkin.js';
+        s.onreadystatechange = function() {
+          if (this.readyState == 'complete' || this.readyState == 'loaded') {
+            initMunchkin();
+          }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName('head')[0].appendChild(s);
+      })();
+    </script>
+  </head>
+  <body class="path-node page-node-type-blogs i18n-es">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LFC7W"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="outer-wrapper">
+  <div class="header-v2">
+    <div id="altium-navigation-header" class="header-v2__primary">
+    <div class="header-v2__container">
+      <a class="header-v2__ico header-v2__mobile-menu-btn" href>
+	      Mobile menu <span></span>
+      </a>
+      <div class="header-v2__logo">
+        <a href="https://www.altium.com/es" target="_blank">
+          <svg width="83" height="18" viewBox="0 0 83 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.4417 0L17.2225 17.1H21.995L26.2142 0H21.4417ZM29.9492 13.2231L31.4708 7.06154H33.4767L34.1683 4.15384H32.1625L33.2 0.138461H28.4275L24.9692 13.9154C24.6233 15.3 24.6925 16.2 25.315 16.6154C25.7992 17.0308 26.8367 17.2385 28.2892 17.1692C29.1192 17.1692 30.0183 17.1 30.9867 17.0308L31.6783 14.1231H30.9175C30.0875 14.2615 29.8108 13.9154 29.9492 13.2231ZM35.8975 4.15384L32.7158 17.1H37.4883L40.67 4.15384H35.8975ZM50.3533 4.15384L48.2783 12.7385C48.0017 13.7769 47.4483 14.2615 46.48 14.2615C45.5808 14.2615 45.235 13.7769 45.5117 12.7385L47.6558 4.15384H42.8833L40.4625 13.9846C40.1167 15.3692 40.3242 16.2692 40.9467 16.7538C41.5692 17.2385 42.3992 17.5154 43.4367 17.4461C45.1658 17.4461 46.5492 16.8231 47.4483 15.5769H47.5175L47.1717 17.1692H51.9442L55.1258 4.15384H50.3533ZM76.0142 4.5C75.3917 4.01538 74.4925 3.80769 73.3858 3.80769C72.625 3.80769 71.8642 3.94615 71.1725 4.22307C70.4117 4.5 69.72 5.05384 69.1667 5.81538C69.0283 5.12307 68.7517 4.63846 68.2675 4.29231C67.7833 3.94615 67.0225 3.80769 65.985 3.80769C64.2558 3.80769 62.8725 4.43077 61.9042 5.74615H61.835L62.25 4.15384H57.4775L54.2958 17.1H59.0683L61.2125 8.51538C61.4892 7.47692 62.0425 6.99231 63.0108 6.99231C63.91 6.99231 64.2558 7.47692 63.9792 8.51538L61.835 17.1H66.6075L68.7517 8.51538C69.0283 7.47692 69.6508 6.99231 70.55 6.99231C71.4492 6.99231 71.795 7.47692 71.5183 8.51538L69.4433 17.1H71.5183C73.04 17.1 74.4233 16.0615 74.7692 14.7461L76.5675 7.33846C76.775 5.95384 76.6367 4.98461 76.0142 4.5ZM12.7267 0C10.375 0.0692307 8.36917 1.38461 7.2625 3.39231L0 17.1H5.46417L6.77833 14.1231H10.8592L10.7208 17.1H16.185L15.5625 0H12.7267ZM11.0667 10.8692H8.23083L11.4817 3.73846L11.0667 10.8692Z"
+              fill="white"/>
+            <path d="M83 15.9923C83 17.1692 82.1008 18 80.9942 18C79.8875 18 78.9883 17.1692 78.9883 15.9923C78.9883 14.8154 79.8875 13.9846 80.9942 13.9846C82.1008 14.0538 83 14.8846 83 15.9923ZM82.5158 15.9923C82.5158 15.0923 81.8933 14.4 80.9942 14.4C80.095 14.4 79.4725 15.0231 79.4725 15.9923C79.4725 16.8923 80.095 17.5154 80.9942 17.5154C81.8933 17.5846 82.5158 16.9615 82.5158 15.9923ZM80.9942 15.0231C81.4783 15.0231 81.755 15.2308 81.755 15.6462C81.755 15.9231 81.6167 16.1308 81.4092 16.2L81.8933 16.9615H81.5475L81.1325 16.2692H80.8558V16.9615H80.51V15.0231H80.9942ZM81.0633 15.9923C81.2708 15.9923 81.4092 15.8538 81.4092 15.7154C81.4092 15.5077 81.2708 15.4385 81.0633 15.4385H80.7175V16.0615H81.0633V15.9923Z"
+              fill="white"/>
+          </svg>
+        </a>
+      </div>
+        <nav class="header-v2__nav">
+    <ul>
+                                              
+        <li class="header-v2__inner-lvl">
+                                    <a href="">Diseño de PCB<div class="header-v2__inner-lvl-ico"><span></span></div></a>            
+                          
+                              <div class="header-v2__nav__lvl2">
+                  <div class="header-v2__nav__col">
+                    <ul>
+                                                                                              <li>
+                        <a href="https://www.altium.com/es/altium-designer">
+                              Altium Designer
+
+                                                              <span class="header-v2__desc">La solución de diseño de PCB más utilizada</span></a>                        </li>
+                                                                                              <li>
+                        <a href="https://www.altium.com/es/circuitstudio">
+                              CircuitStudio
+
+                                                              <span class="header-v2__desc">Nivel Principiante, Herramienta de diseño de PCB profesional</span></a>                        </li>
+                                                                                              <li>
+                        <a href="https://www.altium.com/es/circuitmaker/overview">
+                              CircuitMaker
+
+                                                              <span class="header-v2__desc">Diseño gratuito de PCB para los fabricantes, código abierto y organizaciones sin fines de lucro</span></a>                        </li>
+                                                                                              <li class="header-v2__top-separator">
+                        <a href="https://www.altium.com/es/altium-designer-for-you">
+                              ¿Por qué pasarse a Altium?
+
+                                                              <span class="header-v2__desc">Descubre por qué y cómo cambiar a Altium desde otras herramientas de diseño de PCB</span></a>                        </li>
+                                          </ul>
+                  </div>
+                </div>
+                                            </li>
+                                              
+        <li class="header-v2__inner-lvl">
+                                    <a href="">Soluciones<div class="header-v2__inner-lvl-ico"><span></span></div></a>            
+                          
+                              <div class="header-v2__nav__lvl2">
+                  <div class="header-v2__nav__col">
+                    <ul>
+                                                                                              <li>
+                        <a href="https://www.altium.com/es/altium-nexus">
+                              For Enterprise
+
+                                                              <span class="header-v2__desc">The Last Mile of Digital Transformation</span></a>                        </li>
+                                                                                              <li>
+                        <a href="https://www.altium.com/es/octopart">
+                              For Parts and Data
+
+                                                              <span class="header-v2__desc">Base de datos de componentes extensa y fácil de usar</span></a>                        </li>
+                                          </ul>
+                  </div>
+                </div>
+                                            </li>
+                                              
+        <li>
+                                    <a href="https://www.altium.com/es/altium-365">Altium 365</a>            
+                              </li>
+                                              
+        <li class="header-v2__inner-lvl">
+                                    <a href="">Recursos y Apoyo<div class="header-v2__inner-lvl-ico"><span></span></div></a>            
+                          
+                              
+                                                                                                                                                                                                                                                                                                                
+                
+                <div class="header-v2__nav__lvl2 header-v2_pos-right _type-4-cols">
+                                      <div class="header-v2__nav__col">
+                                              <div class="header-v2__title">Explora los productos</div>
+                        <ul>
+                                                      <li>
+                              <a href="https://www.altium.com/es/free-trials">Pruebas Gratis</a>
+                                                          </li>
+                                                      <li>
+                              <a href="https://www.altium.com/es/products/downloads">Descargas</a>
+                                                          </li>
+                                                      <li>
+                              <a href="https://www.altium.com/es/products/extensions">Extensiones</a>
+                                                          </li>
+                                                  </ul>
+                                          </div>
+                                      <div class="header-v2__nav__col">
+                                              <div class="header-v2__title">Recursos y Soporte</div>
+                        <ul>
+                                                      <li>
+                              <a href="https://resources.altium.com/es">Todos los recursos</a>
+                                                          </li>
+                                                      <li>
+                              <a href="https://www.altium.com/es/support">Centro de Asistencia</a>
+                                                          </li>
+                                                      <li>
+                              <a href="https://www.altium.com/documentation/">Documentación</a>
+                                                          </li>
+                                                  </ul>
+                                          </div>
+                                      <div class="header-v2__nav__col">
+                                              <div class="header-v2__title">Comunidad Altium</div>
+                        <ul>
+                                                      <li>
+                              <a href="https://forum.live.altium.com/">Foro</a>
+                                                          </li>
+                                                      <li>
+                              <a href="https://bugcrunch.live.altium.com/">Crisis de fallas</a>
+                                                          </li>
+                                                      <li>
+                              <a href="https://bugcrunch.live.altium.com/#/Ideas/New">Ideas</a>
+                                                          </li>
+                                                  </ul>
+                                          </div>
+                                      <div class="header-v2__nav__col">
+                                              <div class="header-v2__title">Education Programs</div>
+                        <ul>
+                                                      <li>
+                              <a href="https://altium.com/training">Professional Training / Certification</a>
+                                                          </li>
+                                                      <li>
+                              <a href="https://www.altium.com/education/educators">University / College Educators</a>
+                                                          </li>
+                                                      <li>
+                              <a href="https://www.altium.com/education/students">University / College Students</a>
+                                                          </li>
+                                                      <li>
+                              <a href="https://www.altium.com/webinars">Webinars</a>
+                                                          </li>
+                                                  </ul>
+                                          </div>
+                                  </div>
+                                            </li>
+                                              
+        <li class="header-v2__store">
+                      <a href="https://store.altium.com/" target="_blank"><span class="header-v2__store__ico"><span></span></span>
+                Tienda
+              </a>                  </li>
+                                              
+        <li class="header-v2__search">
+                      <a class="header-v2__search__show header-v2__ico header-v2__use-ico-search" href="https://www.altium.com/search">
+                Search Open <span></span></a>
+                          <form class="header-v2__search__field-wrap" action="https://www.altium.com/search" target="_blank">
+                <input class="header-v2__search__field" type="text" value="" name="s">
+                <button class="header-v2__search__btn header-v2__ico header-v2__use-ico-search" type="submit">
+                  Search<span></span>
+                </button>
+                <a class="header-v2__search__close header-v2__ico header-v2__use-ico-close" href>
+                    Search Close <span></span></a>              </form>
+            
+                  </li>
+          </ul>
+  </nav>
+
+
+      
+      <div class="header-v2__user">
+        <div id="user-info-injectable-to-header" style="display: none;">
+        </div>
+
+        <a style="display: none;" class="header-v2__user__btn" href="https://auth.altium.com/?ReturnUrl=">Iniciar sesión</a>      </div>
+    </div>
+  </div>
+
+    <header class="s-header header-v2__element">
+      <div class="s-header__in">
+        
+  <div class="region am-container region-main-menu">
+    <a href="#" class="s-header__btn-mobile">
+      <span>
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 1.47754L5 5.47754L1 1.47754" stroke="#353535" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 4.5L5 0.5L9 4.5" stroke="#353535" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      Diseño de PCB
+    </a>
+    <nav role="navigation" aria-labelledby="block-mainspanishmenu-menu" id="block-mainspanishmenu" class="block block-menu navigation s-header__nav menu--main-spanish-menu">
+            
+  <h2 class="visually-hidden" id="block-mainspanishmenu-menu">Main Spanish menu</h2>
+  
+
+    <div class="s-header__menu-wrap">
+          
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/es" data-drupal-link-system-path="&lt;front&gt;">Inicio </a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/es/pcb-design" title="PCB Design" data-drupal-link-system-path="taxonomy/term/4478">Diseño de PCB</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/es/collaboration" title="Collaboration" data-drupal-link-system-path="taxonomy/term/4448">Colaboración</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/component-management" title="Component Creation" data-drupal-link-system-path="taxonomy/term/4449">Creación de componentes</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/design-data-management" data-drupal-link-system-path="taxonomy/term/4453">Gestión de Datos</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/design-documentation" title="Design Outputs" data-drupal-link-system-path="taxonomy/term/4454">Las Salidas de Diseño</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/ecad-mcad" data-drupal-link-system-path="taxonomy/term/4459">ECAD/MCAD</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/high-density-interconnect-pcb" title="HDI Design" data-drupal-link-system-path="taxonomy/term/4537">HDI Diseño</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/high-speed-design" title="High-Speed Design" data-drupal-link-system-path="taxonomy/term/4468">Diseño de Alta Velocidad</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/multiple-board-design" title="Multi-Board Design" data-drupal-link-system-path="taxonomy/term/4538">De Varias Tarjetas</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/pcb-layout" title="PCB Layout" data-drupal-link-system-path="taxonomy/term/4540">Diseño de PCB</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/pcb-routing" title="PCB Routing" data-drupal-link-system-path="taxonomy/term/4482">PCB de Enrutamiento</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/pcb-supply-chain" title="PCB Supply Chain" data-drupal-link-system-path="taxonomy/term/4483">Cadena de Suministro</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/power-integrity" data-drupal-link-system-path="taxonomy/term/4490">Poder Integridad</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/rf-pcb-design" title="RF PCB Design" data-drupal-link-system-path="taxonomy/term/4539">Diseño de RF</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/rigid-flex" title="Rigid Flex" data-drupal-link-system-path="taxonomy/term/4496">Rígido-Flex</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/schematic-capture" title="Schematic Capture" data-drupal-link-system-path="taxonomy/term/4498">Esquema de Captura</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/signal-integrity" title="Signal Integrity" data-drupal-link-system-path="taxonomy/term/4500">Integridad de la Señal</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/simulation-and-analysis" title="PCB Simulation" data-drupal-link-system-path="taxonomy/term/4501">Simulación de PCB</a>
+              </li>
+          </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="">Software</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/es/altium-365" data-drupal-link-system-path="taxonomy/term/4430">Altium 365	</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/altium-designer" data-drupal-link-system-path="taxonomy/term/4431">Altium Designer</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/pdn-analyzer" data-drupal-link-system-path="taxonomy/term/4487">PDN Analyzer</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/nexus">Soluciones Empresariales</a>
+              </li>
+          </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <span>Recursos</span>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/es/news" data-drupal-link-system-path="taxonomy/term/4475">Noticias de ingeniería</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/guide-books" data-drupal-link-system-path="taxonomy/term/4467">Guías</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/newsletter" data-drupal-link-system-path="taxonomy/term/4476">Newsletter</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/whitepapers" data-drupal-link-system-path="taxonomy/term/4511">Libros blancos</a>
+              </li>
+                <li class="menu-item">
+        <a href="/es/webinars" data-drupal-link-system-path="taxonomy/term/4510">Webinars</a>
+              </li>
+          </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="https://www.altium.com/es/free-trials" title="Free Trials">Pruebas Gratis</a>
+              </li>
+          </ul>
+  
+
+
+      </div>
+</nav>
+<div id="block-altiumsearchminblock" class="block block-altium-custom-search block-altium-search-min-block">
+  
+    
+      <div class="s-header__f-search"><div class="f-search _min"><form class="views-exposed-form bef-exposed-form" data-drupal-selector="views-exposed-form-altium-search-view-page-1" action="https://www.altium.com/es/search" method="get" id="views-exposed-form-altium-search-view-page-1" accept-charset="UTF-8">
+  <div class="form--inline clearfix">
+  <div class="_use-clear js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-s form-item-s">
+      
+        <input data-drupal-selector="edit-s" data-msg-maxlength="This field field has a maximum length of 128." placeholder="Buscar" type="text" id="edit-s" name="s" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<input data-drupal-selector="edit-radio-nn" type="hidden" name="radio-nn" value="company" />
+<input data-drupal-selector="edit-checkbox-resources" type="hidden" name="checkbox-Resources" value="Resources" />
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-altium-search-view" type="submit" id="edit-submit-altium-search-view" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+</div>
+
+</form>
+</div>
+</div>
+  </div>
+
+  </div>
+
+      </div>
+    </header>
+  </div>
+
+      <dams-banner resource="sticky_top_html"></dams-banner>
+
+
+    <div class="dams-insert-after"></div>
+  <div class="inner-wrapper">
+    <div class="content-wrapper">
+      
+      
+      
+      
+
+        <div class="region region-content">
+    <div id="block-altium-content" class="block block-system block-system-main-block">
+  
+    
+      
+<section  data-history-node-id="558673596" about="/es/p/automotive-telematics-system-design" class="section section_gap_md">
+  <div class="am-container">
+    <div id="block-altiumbreadcrumbblock" class="block block-altium-breadcrumb block-altium-breadcrumb-block">
+  
+    
+                        <div class="breadcrumb ">
+                          <a href="/es">Inicio</a>
+              <span class="breadcrumb__ico"></span>
+                          <a href="/es/pcb-design">Diseño de PCB</a>
+              <span class="breadcrumb__ico"></span>
+            
+                          <span>Diseño de sistemas telemáticos automotrices</span>
+                      </div>
+        
+  </div>
+
+                            
+    <div class="content-wrapper__inner _size-md">
+      <div class="content-wrapper__main">
+        <!-- ty_block_mobile_begin -->
+
+        <!-- ty_block_mobile_end -->
+        <div class="b-post">
+          <div class="b-post__body">
+            <h1><span class="field field--name-title field--type-string field--label-hidden">Diseño de sistemas telemáticos automotrices</span>
+</h1>
+
+                          <div class="b-author-min b-post__b-author-min">
+                                  <div class="b-author-min__img">
+                                          <img src="https://resources.altium.com/sites/default/files/styles/medium/public/user_pictures/headshot-small-350.jpg?itok=I-ztzpal" alt="">
+                                      </div>
+                                      <a href="/es/experts/zachariah-peterson" class="b-author-min__name">
+                      Zachariah Peterson
+                    </a>
+                                    <div class="b-author-min__date">
+                    |&nbsp Creado: September 5, 2019
+                                          &nbsp|&nbsp
+                      <strong>
+                        Actualizado: February 4, 2021
+                      </strong>
+                                      </div>
+                                                </div>
+            
+                          <div class="b-post__media">
+                
+           <picture>
+                  <source media="all and (min-width: 550px)" type="image/webp" width="900" height="544" data-srcset="/sites/default/files/styles/max_width_1300/public/blogs/Automotive%20Telematics%20System%20Design-67421.webp?itok=3BsHZxav 1x"/>
+              <source type="image/webp" width="768" height="464" data-srcset="/sites/default/files/styles/max_width_768/public/blogs/Automotive%20Telematics%20System%20Design-67421.webp?itok=KAioE0DA 1x"/>
+              <source media="all and (min-width: 550px)" type="image/jpeg" width="900" height="544" data-srcset="/sites/default/files/styles/max_width_1300/public/blogs/Automotive%20Telematics%20System%20Design-67421.jpg?itok=3BsHZxav 1x"/>
+              <source type="image/jpeg" width="768" height="464" data-srcset="/sites/default/files/styles/max_width_768/public/blogs/Automotive%20Telematics%20System%20Design-67421.jpg?itok=KAioE0DA 1x"/>
+                  <img loading="eager" width="900" height="544" src="/sites/default/files/styles/max_width_1300/public/blogs/Automotive%20Telematics%20System%20Design-67421.jpg?itok=3BsHZxav" alt="Se espera un gran crecimiento de los ingresos derivados del diseño de PCB para sistemas telemáticos automotrices" typeof="foaf:Image" />
+
+  </picture>
+
+ 
+  
+              </div>
+            
+            <div  class="topics-list">
+  <h2> Tabla de contenido </h2>
+  <div class="b-hide _hide" data-items="5" data-more-text="Ampliar la Tabla de contenido" data-less-text="Contraer la Tabla de contenido">
+          <ul><li class="b-hide__item"><a href="#el-panorama-de-los-sistemas-telematicos">El panorama de los sistemas telemáticos</a></li><li class="b-hide__item"><a href="#pcb-para-sistemas-telematicos-en-vehiculos">PCB para sistemas telemáticos en vehículos</a></li><li class="b-hide__item"><a href="#requisitos-basicos">Requisitos básicos</a></li><li class="b-hide__item"><a href="#comunicacion-inalambrica">Comunicación inalámbrica</a></li><li class="b-hide__item"><a href="#integracion-con-gps">Integración con GPS</a></li></ul>
+      </div>
+</div>
+
+            
+            
+            
+            <div data-content-banner-area>
+              
+             <p>En 2015 el coste de la electrónica en un vehículo nuevo superaba por primera vez en la historia el coste del acero en bruto. No debería sorprendernos; el aumento continuo del número de sistemas electrónicos que se instalan en los vehículos hace que este cambio en la estructura de costes fuese inevitable. Como los vehículos son cada vez más autónomos, están más conectados e incluyen más prestaciones, esta es una tendencia que continuará en aumento.&nbsp;</p>
+
+<p>Después de que General Motors popularizará en los años noventa el sistema OnStar, los sistemas telemáticos automotrices han sido una constante en el sector. En la actualidad, un sistema telemático automotriz permite a los fabricantes recopilar datos de los registradores de datos, los sistemas de comunicación, los sistemas de navegación GPS y los sistemas de seguridad. Los últimos avances tecnológicos y el auge de los vehículos sin conductor en el futuro está fomentando un mayor uso de estos sistemas, y los diseñadores deberían tener en cuenta cómo pueden crear estos sistemas e incorporarlos en los nuevos vehículos.</p>
+
+<h2><a id="el-panorama-de-los-sistemas-telematicos">El panorama de los sistemas telemáticos</a></h2>
+
+<p>Se espera que los beneficios derivados solamente de las PCB sigan creciendo interanualmente entre un 5 % y un 10 %. Entonces, ¿qué es lo que está generando crecimiento en esta área? Además de las últimas funciones de seguridad, los sistemas de información y entretenimiento y la interconectividad, los sistemas telemáticos se están usando cada vez más en los vehículos convencionales y se exigirán en los vehículos autónomos del futuro.</p>
+
+<p>Los sistemas telemáticos son un área en la que las compañías de electrónica automotriz y los principales fabricantes de vehículos pueden prever un importante crecimiento, ya que es muy probable que estos sistemas sean necesarios en vehículos nuevos más convencionales y en los vehículos autónomos. A partir de 2018, el Reglamento 2015/758 de la UE exige que todos los vehículos nuevos que se vendan en la UE incluyan oficialmente un sistema telemático. Los distintos estados de EE. UU. tienen diferentes normas sobre los sistemas telemáticos, pero la <a href="https://web.archive.org/web/20200803100256/https://www.gsa.gov/policy-regulations/policy/vehicle-management-policy/telematics">Administración de Servicios Generales</a> reconoce oficialmente su importancia en los parques móviles actuales desde el punto de vista del ahorro de costes.</p>
+
+<p>Como parte del desarrollo continuo de los vehículos autónomos, los sistemas telemáticos permiten a los fabricantes de vehículos, los investigadores y las aseguradoras recopilar datos sobre estos nuevos vehículos antes de que se pongan a disposición del público. El conductor humano típico puede viajar unos 80 500 km antes de tener un accidente, mientras que la distancia típica que recorrió un vehículo autónomo como parte de un <a href="https://www.darpa.mil/about-us/timeline/-grand-challenge-for-autonomous-vehicles">DARPA Grand Challenge</a> fue de unos 160 km. La cantidad de datos que pasan por un vehículo puede recopilarse con un sistema telemático para vehículos, lo que facilita a los ingenieros la información que necesitan para mejorar su tecnología. Las aseguradoras utilizan esos mismos datos para crear planes de precios bajo el modelo de seguro basado en el uso (UBI, por sus siglas en inglés).</p>
+
+<p>&nbsp;</p>
+<figure role="group" class="caption caption-img align-center">
+<img alt="El sistema telemático automotriz eCall es ahora obligatorio en la UE" data-entity-type="file" data-entity-uuid="96104b1d-ab57-4ed8-947c-ff7919c55680" width="500" height="272" loading="lazy" class="lazyload" data-src="/sites/default/files/inline-images/migrate/aHViPTY1NjQ2JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzVkNzFhZTg4NDU1MmYuanBnJnZlcnNpb249MDAwMCZzaWc9NjExNGU5MjVhNzZiMjJiMTBkZTMwMTJhNDFlOGY3MGQ%25253D" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+<figcaption>El sistema telemático automotriz eCall es ahora obligatorio en la UE</figcaption>
+</figure>
+<p dir="ltr" style="text-align: center;">&nbsp;</p>
+
+<h2><a id="pcb-para-sistemas-telematicos-en-vehiculos">PCB para sistemas telemáticos en vehículos</a></h2>
+
+<p>Tanto si estás implementando una solución para seguros UBI, vehículos sin conductor, diagnósticos de vehículos, respuesta ante accidente o automática de emergencia, como sistemas para comunicación entre vehículos, se espera que los servicios telemáticos evolucionen a partir de sus aplicaciones actuales. Estos cambios se verán reflejados a nivel de PCB y están integrados a nivel de software, ya que la gran cantidad de datos generados en los nuevos vehículos debe ser procesada y comunicada en tiempo real.</p>
+
+<h2><a id="requisitos-basicos">Requisitos básicos</a></h2>
+
+<p>Estos sistemas pueden integrarse en algún lugar debajo del capó o en el salpicadero, o pueden añadirse como una función posventa a través del puerto OBD-II del vehículo. En cualquier caso, esto da al dispositivo acceso directo a los datos del vehículo desde su ECU. Estos dispositivos son pequeños (menos de 165 cm3) y se alimentan de la CC del vehículo. Los sensores del vehículo recopilan los datos que se almacenan en la ECU, que a continuación se envían a la unidad telemática para su procesado, almacenamiento y transmisión. Una opción en un dispositivo posventa es incluir un <a href="https://resources.altium.com/p/no-more-wrong-ports-implementing-usb-devices-your-hardware-design">puerto USB</a> o un puerto para una tarjeta microSIM; esto se hace en el popular sistema Freematics ONE+ (ver esquemático más abajo).</p>
+<figure role="group" class="caption caption-img align-center">
+<img alt="Diseño esquemático del sistema telemático automotriz Freematics ONE+" data-entity-type="file" data-entity-uuid="e02cae53-af2f-4940-b886-fd6b6290b35c" style="width: 500px; height: 353px;" width="2339" height="1653" loading="lazy" class="lazyload" data-src="/sites/default/files/inline-images/migrate/aHViPTY1NjQ2JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzVkNzFhZWI4ZDI0NWIucG5nJnZlcnNpb249MDAwMCZzaWc9NWEyMjZjNTdlMDhjNzc0YTRhMzlhMTY1OTRjNTVmMTY%25253D" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+<figcaption>Diseño esquemático del sistema telemático automotriz <a href="https://freematics.com/pages/products/freematics-one-plus/">Freematics ONE+</a>&nbsp;</figcaption>
+</figure>
+<p dir="ltr" style="text-align: center;">&nbsp;</p>
+
+<p>Estos sistemas suelen funcionar a frecuencias de reloj de decenas o cientos de MHz y no exigen una lógica de velocidad sumamente alta. Si el sistema telemático se coloca debajo del salpicadero, entonces puedes construir tu tarjeta con FR4. Un sistema telemático que se coloque en el compartimento del motor es mejor construirlo sobre una <a href="https://resources.altium.com/es/p/ceramic-vs-fr4-multilayer-pcbs-when-use-either-and-how">PCB cerámica</a>, aunque esta ubicación no aporta ninguna ventaja en lo que respecta a su funcionalidad.&nbsp;</p>
+
+<h3><a id="comunicacion-inalambrica">Comunicación inalámbrica</a></h3>
+
+<p>Incluir conectividad WiFi o Bluetooth en un módulo telemático permite descargar tus datos telemáticos en un dispositivo externo, aunque los módulos telemáticos más nuevos que proporcionan datos a aseguradoras, fabricantes o empresas necesitan acceso móvil para transmitir los datos. Una opción consiste en transmitir sobre WCDMA, HSPA+ u otro protocolo inalámbrico. Independientemente del protocolo que utilices para la comunicación, tendrás que incluir un transceptor y conexión con un chip (para módulos integrados) o antena de goma (normalmente en los módulos posventa).</p>
+
+<p>Esto introduce el sistema telemático en el régimen de señal mixta, que exige una estrategia de conexión a tierra de RF. Las señales analógicas y digitales deben separarse en áreas distintas del plano de tierra para evitar interferencias. Una tarjeta de cuatro capas con un solo plano de tierra sólido suele funcionar bien para estos sistemas, aunque una buena estrategia consiste en usar un plano de tierra a fin de proporcionar cierta protección entre las secciones digitales y de RF. Aquí estarás funcionando a no más de 5 GHz, dependiendo del protocolo inalámbrico.</p>
+
+<h3><a id="integracion-con-gps">Integración con GPS</a></h3>
+
+<p>Los vehículos más nuevos ya suelen incluir sistemas de navegación GPS que se integran dentro del sistema de información y entretenimiento. Estos datos de navegación ya se mueven entre la pantalla (información/entretenimiento o salpicadero digital) y una ECU central, y los datos pueden enviarse a la unidad telemática a través del puerto OBD-II. Esto exige un parche de software y posiblemente una modificación del diseño del OBD-II.</p>
+
+<p>Para un sistema telemático posventa, la <a href="https://resources.altium.com/p/gps-antennas-in-your-pcb-design-you-won-t-get-lost-again">antena GPS</a> debe conectarse como una unidad externa a través del lateral del paquete y debe montarse en la ubicación apropiada para recibir la mejor señal. La parte superior del salpicadero, cerca del centro del parabrisas, es el lugar ideal para situar la antena, aunque estas antenas también pueden acoplarse al parabrisas delantero o trasero cuando estén abiertas.</p>
+
+<h3>El papel del software integrado en los sistemas telemáticos</h3>
+
+<p>Es posible que los aspectos normativos relacionados con la privacidad de los datos, sobre todo en la UE, tengan un papel más importante en el software que en el hardware. Sin embargo, cabe esperar que se exija a los sistemas telemáticos unos mayores requisitos mínimos de funcionalidad en los países industrializados según vaya avanzando la tecnología. Los problemas de seguridad en los vehículos serán reflejo de los que surjan con los <a href="https://resources.altium.com/p/internet-of-things-security-issues-prompt-government-intervention">dispositivos de la Internet de las cosas</a> al aumentar la conectividad de los vehículos, lo que planteará verdaderos retos a los ingenieros de software integrado. Los ingenieros deben tener en cuenta que unas plataformas de hardware y software abiertas y escalables a través de smartphones y tablets serán la forma predominante de interactuar con los sistemas telemáticos en los vehículos.</p>
+
+<p>Los diseñadores electrónicos en el sector automotriz necesitan acceso a las herramientas de diseño con los modelos de PCB adecuados y herramientas de diseño integradas para sistemas telemáticos y varios otros sistemas. <a href="https://www.altium.com/es/altium-designer">Altium Designer</a><sup>®</sup> contiene funciones de diseño para estas aplicaciones automotrices y mucho más, todo ello dentro de un entorno de diseño unificado.</p>
+
+<p><a href="https://www.altium.com/es/contact-us">Ponte en contacto con nosotros</a> o descarga una <a href="https://resources.altium.com/es/p/pcb-design-software-download">prueba gratuita</a> de Altium Designer para obtener acceso a las mejores herramientas de diseño, enrutamiento y simulación del sector. <a href="https://www.altium.com/es/contact-us">Habla con un experto de Altium hoy mismo</a> para más información.</p> 
+      
+
+            </div>
+
+            
+            
+          </div>
+
+          
+
+          <div  class="b-links _use-bg">
+  <div class="b-links__wrap">
+    <div class="b-links__wrap__inner">
+                          
+             <a href="https://www.altium.com/es/altium-designer" target="_blank">Altium Designer - Software de Diseño de PCB</a> 
+      
+
+      
+                          
+             <a href="https://www.altium.com/es/altium-365" target="_blank">Altium 365 - Plataforma de Diseño de PCB</a> 
+      
+
+      
+                          
+             <a href="https://www.altium.com/es/altium-nexus" target="_blank">Altium Nexus - Diseño ágil de PCB para equipos</a> 
+      
+
+      
+                          
+             <a href="https://www.altium.com/es/free-trials" target="_blank">Prueba GRATIS</a> 
+      
+
+      
+          </div>
+  </div>
+</div>
+
+
+                      <div class="b-post__b-author b-author">
+              <div class="b-author__img-wrap">
+                <div class="b-author__img">
+                                      <img src="https://resources.altium.com/sites/default/files/styles/medium/public/user_pictures/headshot-small-350.jpg?itok=I-ztzpal" alt="">
+                                  </div>
+                <h3>Sobre el autor / Sobre la autora</h3>
+              </div>
+
+              <div class="b-author__body">
+                <h3>Sobre el autor / Sobre la autora</h3>
+                <div class="b-author__desc">
+                  <p>
+                    
+             <p>Zachariah Peterson tiene una amplia experiencia técnica en el mundo académico y la industria. Actualmente brinda servicios de investigación, diseño y marketing a empresas de la industria electrónica. Antes de trabajar en la industria de PCB, enseñó en la Universidad Estatal de Portland y realizó investigaciones sobre la teoría, los materiales y la estabilidad del láser aleatorio. Su experiencia en investigación científica abarca temas de láseres de nanopartículas, dispositivos semiconductores electrónicos y optoelectrónicos, sensores ambientales y estocástica. Su trabajo ha sido publicado en más de una docena de revistas revisadas por pares y actas de congresos, y ha escrito más de 1000 blogs técnicos sobre diseño de PCB para varias empresas. Es miembro de IEEE Photonics Society, IEEE Electronics Packaging Society, American Physical Society y Printed Circuit Engineering Association (PCEA), y anteriormente se desempeñó en el Comité Asesor Técnico de Computación Cuántica de INCITS.</p>
+ 
+      
+
+                  </p>
+                </div>
+                <div class="b-author__link-wrap">
+                  <a href="/es/experts/zachariah-peterson"
+                     class="b-author__link">Más contenido de Zachariah Peterson</a>
+                </div>
+              </div>
+            </div>
+          
+          
+
+          
+
+        </div>
+
+        <div class="views-element-container block recent-post block-views block-views-blockrecent-posts-block-1" id="block-views-block-recent-posts-block-1">
+  
+      <h2>Recursos Relacionados</h2>
+    
+  <div class="recent-post__slider-tiles slider-tiles">
+    <div class="slider-tiles__nav"></div>
+    <div class="b-tiles">
+              <div><div class="js-view-dom-id-fa94768b8410acd3aadf758111110d98d0c9173016852cf6d73bd9eaba7fdec6">
+  
+  
+  
+
+  
+  
+  
+
+  <div class="b-tiles__items">
+          <div class="views-row"><div data-history-node-id="550243436" about="/es/p/el-valor-de-las-reglas-de-diseno" class="b-tiles__item">
+  
+  
+
+  <a href="/es/p/el-valor-de-las-reglas-de-diseno"  class="b-tiles__link">
+    <span class="b-tiles__preview  ">
+
+              
+<span class="b-tiles__img">
+         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="480" height="252" alt="El Valor de las Reglas de Diseño" loading="lazy" class="lazyload image-style-teasers-image" data-src="/sites/default/files/styles/teasers_image/public/blogs/El%20Valor%20de%20las%20Reglas%20de%20Dise%C3%B1o-68145.jpg?itok=o4xcmVkq" typeof="foaf:Image" />
+
+
+ 
+  </span>
+
+      
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+
+        <span class="b-tiles__title">El Valor de las Reglas de Diseño</span>
+
+        <span class="b-tiles__desc">
+          
+               El objetivo del diseñador es producir un PCB que cumpla con todos los requerimientos definidos según las especificaciones del producto. Estos requerimientos deben ser transformados en reglas de diseño para poder automatizar su comprobación y asegurar un diseño satisfactorio. ¿Por qué las reglas de diseño son necesarias? Las reglas de diseño limitan la libertad que nos ofrece la herramienta ECAD con el fin de asegurar que el diseño cumpla con los
+
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+                  Leer Artículo
+              </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div data-history-node-id="354276736" about="/es/p/what-causes-ringing-on-a-pcb-and-how-to-solve-it" class="b-tiles__item">
+  
+  
+
+  <a href="/es/p/what-causes-ringing-on-a-pcb-and-how-to-solve-it"  class="b-tiles__link">
+    <span class="b-tiles__preview  ">
+
+              
+<span class="b-tiles__img">
+         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="480" height="261" alt="Qué Causa la Oscilación Transitoria en una Placa de Circuito Impreso y Cómo Resolverla" title="Qué Causa la Oscilación Transitoria en una Placa de Circuito Impreso y Cómo Resolverla" loading="lazy" class="lazyload image-style-teasers-image" data-src="/sites/default/files/styles/teasers_image/public/blogs/Qu%C3%A9%20Causa%20la%20Oscilaci%C3%B3n%20Transitoria%20en%20una%20Placa%20de%20Circuito%20Impreso%20y%20C%C3%B3mo%20Resolverla-45857.jpg?itok=Hd1mmkk8" typeof="foaf:Image" />
+
+
+ 
+  </span>
+
+      
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+
+        <span class="b-tiles__title">Qué Causa la Oscilación Transitoria en una Placa de Circuito Impreso y Cómo Resolverla</span>
+
+        <span class="b-tiles__desc">
+          
+               En mi primera práctica de laboratorio de ingeniería eléctrica, construimos un circuito para rebotar la salida de un interruptor. Recuerdo ver la señal inestable original y luego la salida rebotada en la pantalla de un osciloscopio. Sentí un malestar profundo por el hecho de que algo tan inocuo en nuestras vidas podría ser tan… desordenado. Por suerte, la persona que era yo en mi primer año de estudios no sabía que ésto era solo el comienzo de mi
+
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+                  Leer Artículo
+              </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div data-history-node-id="353893069" about="/es/p/switching-vs-linear-voltage-regulator-what-s-the-best-choice-for-your-power-management-circuit" class="b-tiles__item">
+  
+  
+
+  <a href="/es/p/switching-vs-linear-voltage-regulator-what-s-the-best-choice-for-your-power-management-circuit"  class="b-tiles__link">
+    <span class="b-tiles__preview  ">
+
+              
+<span class="b-tiles__img">
+         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="480" height="261" alt="El Regulador de Voltaje Conmutado vs. el Regulador de Voltaje Lineal: ¿Cuál es la Mejor Opción para el Circuito de Administración?" loading="lazy" class="lazyload image-style-teasers-image" data-src="/sites/default/files/styles/teasers_image/public/blogs/El%20Regulador%20de%20Voltaje%20Conmutado%20vs.%20el%20Regulador%20de%20Voltaje%20Lineal%3A%20%C2%BFCu%C3%A1l%20es%20la%20Mejor%20Opci%C3%B3n%20para%20el%20Circuito%20de%20Administraci%C3%B3n%3F-45706.jpg?itok=yC-Wz68-" typeof="foaf:Image" />
+
+
+ 
+  </span>
+
+      
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+
+        <span class="b-tiles__title">El Regulador de Voltaje Conmutado vs. el Regulador de Voltaje Lineal: ¿Cuál es la Mejor Opción para el Circuito de Administración?</span>
+
+        <span class="b-tiles__desc">
+          
+               Reguladores de voltaje para circuitos de alimentación ¿Alguna vez un condensador le ha explotado en la cara? Así es como comencé mi carrera en el diseño electrónico. También me equivoqué al realizar el cálculo del presupuesto para lo que originalmente se presentó como un proyecto “simple”. El resultado final fue un prototipo de placa de circuito impreso (PCB) con un regulador de voltaje al rojo vivo capaz de freír un huevo… o peor. Desde aquel
+
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+                  Leer Artículo
+              </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div data-history-node-id="339583731" about="/es/p/ubiquitous-internet-of-things-devices-will-mean-more-work-in-the-pcb-design-industry" class="b-tiles__item">
+  
+  
+
+  <a href="/es/p/ubiquitous-internet-of-things-devices-will-mean-more-work-in-the-pcb-design-industry"  class="b-tiles__link">
+    <span class="b-tiles__preview  ">
+
+              
+<span class="b-tiles__img">
+         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="480" height="480" alt="Los dispositivos omnipresentes del Internet de las cosas significarán más trabajo en la industria del diseño de PCBs" loading="lazy" class="lazyload image-style-teasers-image" data-src="/sites/default/files/styles/teasers_image/public/blogs/Los%20dispositivos%20omnipresentes%20del%20Internet%20de%20las%20cosas%20significar%C3%A1n%20m%C3%A1s%20trabajo%20en%20la%20industria%20del%20dise%C3%B1o%20de%20PCBs-34802.jpg?itok=qlXueHRA" typeof="foaf:Image" />
+
+
+ 
+  </span>
+
+      
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+
+        <span class="b-tiles__title">Los dispositivos omnipresentes del Internet de las cosas significarán más trabajo en la industria del diseño de PCBs</span>
+
+        <span class="b-tiles__desc">
+          
+               Para que esto sea una realidad, tendrá que dedicarle muchas más horas ¿Qué tienen en común los iPhone y I, Robot? Vamos, la "i" es demasiado obvia. Ambos nos rodean con computadoras. Si bien creo que el futuro seguramente implicará muchas computadoras, dudo que la mayoría sean tan bonitas y brillantes. También esperemos que no intenten matarnos. El Internet de las cosas (IoT) está dando nacimiento a un mundo donde todo tendrá una computadora
+
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+                  Leer Artículo
+              </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div data-history-node-id="540645394" about="/es/p/definicion-del-contorno-del-pcb" class="b-tiles__item">
+  
+  
+
+  <a href="/es/p/definicion-del-contorno-del-pcb"  class="b-tiles__link">
+    <span class="b-tiles__preview  ">
+
+              
+<span class="b-tiles__img">
+         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="480" height="252" alt="Definición del contorno del PCB" loading="lazy" class="lazyload image-style-teasers-image" data-src="/sites/default/files/styles/teasers_image/public/blogs/Definici%C3%B3n%20del%20contorno%20del%20PCB-67995.jpg?itok=AyDMlkCJ" typeof="foaf:Image" />
+
+
+ 
+  </span>
+
+      
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+
+        <span class="b-tiles__title">Definición del contorno del PCB</span>
+
+        <span class="b-tiles__desc">
+          
+               Una de las primeras tareas en el diseño de PCB es la definición del contorno. Éste puede venir impuesto por la envoltura mecánica o, quizás el diseñador tenga libertad para definirlo. En cualquier caso, el contorno debe ser factible para la fabricación. Un diseño listo para la fabricación La fabricación impone unas limitaciones sobre diseño . No cualquier contorno es podrá ser fabricado.. Tamaño, forma y dimensiones. En la mayoría de los casos el
+
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+                  Leer Artículo
+              </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div data-history-node-id="527999926" about="/es/p/la-fabricacion-de-pcbs-y-sus-implicaciones-en-el-diseno" class="b-tiles__item">
+  
+  
+
+  <a href="/es/p/la-fabricacion-de-pcbs-y-sus-implicaciones-en-el-diseno"  class="b-tiles__link">
+    <span class="b-tiles__preview  ">
+
+              
+<span class="b-tiles__img">
+         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="480" height="261" alt="La fabricación de PCBs y sus implicaciones en el diseño" loading="lazy" class="lazyload image-style-teasers-image" data-src="/sites/default/files/styles/teasers_image/public/blogs/La%20fabricaci%C3%B3n%20de%20PCBs%20y%20sus%20implicaciones%20en%20el%20dise%C3%B1o-42119.jpg?itok=_xGQZpOQ" typeof="foaf:Image" />
+
+
+ 
+  </span>
+
+      
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+
+        <span class="b-tiles__title">La fabricación de PCBs y sus implicaciones en el diseño</span>
+
+        <span class="b-tiles__desc">
+          
+               El diseño y la fabricación de PCBs son tareas llevadas a cabo por diferentes agentes. El diseñador de PCBs está encargado de generar la documentation que el fabricante usa para la manufactura. El objetivo del diseñador es producir un diseño que sea factible para la fabricación, es decir, el diseño debe estar dentro de las capacidades y tolerancias de producción de su proveedor. Este objetivo debe estar presente durante todas las fases de diseño
+
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+                  Leer Artículo
+              </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div data-history-node-id="469940609" about="/es/p/homegrown-pcb-professionals-bom-management-and-subject-matter-expertise" class="b-tiles__item">
+  
+  
+
+  <a href="/es/p/homegrown-pcb-professionals-bom-management-and-subject-matter-expertise"  class="b-tiles__link">
+    <span class="b-tiles__preview  ">
+
+              
+<span class="b-tiles__img">
+         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="480" height="290" alt="Profesionales locales de PCB, gestión de listas de materiales y experiencia en la materia" title="Profesionales locales de PCB, gestión de listas de materiales y experiencia en la materia" loading="lazy" class="lazyload image-style-teasers-image" data-src="/sites/default/files/styles/teasers_image/public/blogs/Profesionales%20locales%20de%20PCB%2C%20gesti%C3%B3n%20de%20listas%20de%20materiales%20y%20experiencia%20en%20la%20materia-43296.jpg?itok=V9ur4abk" typeof="foaf:Image" />
+
+
+ 
+  </span>
+
+      
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+
+        <span class="b-tiles__title">Profesionales locales de PCB, gestión de listas de materiales y experiencia en la materia</span>
+
+        <span class="b-tiles__desc">
+          
+               OnTrack Newsletter Septiembre 2018 VOL. 2 No 6 ¿LOS INGENIEROS Y TECNÓLOGOS DE PCB SON COSECHADOS EN CASA? Destacando a los tecnólogos multigeneracionales Durante el último año, he notado una sutil tendencia en los diseñadores y tecnólogos que hemos entrevistado para este boletín. ¿Lo ha notado? Ha habido un número de veces que la gente citó a sus padres como las personas que los inspiraron a seguir una carrera en electrónica. (Piense en...Rick
+
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+                  Leer Artículo
+              </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div data-history-node-id="417920955" about="/es/p/add-any-component-your-design-unified-component-libraries" class="b-tiles__item">
+  
+  
+
+  <a href="/es/p/add-any-component-your-design-unified-component-libraries"  class="b-tiles__link">
+    <span class="b-tiles__preview  ">
+
+              
+<span class="b-tiles__img">
+         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="480" height="270" alt="Añade Cualquier Componente a tu Diseño de PCB con las Bibliotecas de Componentes Unificadas" loading="lazy" class="lazyload image-style-teasers-image" data-src="/sites/default/files/styles/teasers_image/public/blogs/A%C3%B1ade%20Cualquier%20Componente%20a%20tu%20Dise%C3%B1o%20de%20PCB%20con%20las%20Bibliotecas%20de%20Componentes%20Unificadas-37215.jpg?itok=2zotrYCC" typeof="foaf:Image" />
+
+
+ 
+  </span>
+
+      
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+
+        <span class="b-tiles__title">Añade Cualquier Componente a tu Diseño de PCB con las Bibliotecas de Componentes Unificadas</span>
+
+        <span class="b-tiles__desc">
+          
+               Al embarcarte en el viaje de diseño de PCB , hay algunos obstáculos iniciales que deberás superar para que tu proceso de diseño funcione sin problemas y sin interrupciones. A veces, el obstáculo es tan manejable como asegurarte de tomar tu café por la mañana. A veces, el obstáculo es tan alto como no tener el conocimiento, la comodidad o el software que necesitas para realizar tus tareas de diseño de PCB. Muchas veces, al esbozar un diseño
+
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+                  Leer Artículo
+              </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div data-history-node-id="407170725" about="/es/p/how-test-short-circuit-pcb" class="b-tiles__item">
+  
+  
+
+  <a href="/es/p/how-test-short-circuit-pcb"  class="b-tiles__link">
+    <span class="b-tiles__preview  ">
+
+              
+<span class="b-tiles__img">
+         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="480" height="261" alt="Cómo detectar un cortocircuito en una PCB" loading="lazy" class="lazyload image-style-teasers-image" data-src="/sites/default/files/styles/teasers_image/public/blogs/So%20testen%20Sie%20Ihre%20Leiterplatte%20auf%20einen%20Kurzschluss-27038.jpg?itok=JuU2RpAe" typeof="foaf:Image" />
+
+
+ 
+  </span>
+
+      
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+
+        <span class="b-tiles__title">Cómo detectar cortocircuitos en una PCB</span>
+
+        <span class="b-tiles__desc">
+          
+               ¿Quieres saber cómo detectar un cortocircuito en una PCB? Encontrar cortocircuitos en una placa de circuito impreso no es una prueba que se realice normalmente con una placa prototipo. De hecho, si tu empresa de fabricación y montaje de PCB ha realizado pruebas en circuito o pruebas de continuidad, habrá verificado la conectividad de tu placa de PCB comparándola con la lista de redes generada a partir de tus archivos de diseño. Por lo tanto, los
+
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+                  Leer Artículo
+              </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div data-history-node-id="564685150" about="/es/p/cooling-fan-electrical-noise-reduction-in-your-pcb" class="b-tiles__item">
+  
+  
+
+  <a href="/es/p/cooling-fan-electrical-noise-reduction-in-your-pcb"  class="b-tiles__link">
+    <span class="b-tiles__preview  ">
+
+              
+<span class="b-tiles__img">
+         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="480" height="290" alt="Reducción del ruido eléctrico del ventilador de enfriamiento en su PCB" loading="lazy" class="lazyload image-style-teasers-image" data-src="/sites/default/files/styles/teasers_image/public/blogs/Cooling%20Fan%20Electrical%20Noise%20Reduction%20in%20Your%20PCB-39257.jpg?itok=paMaOIQx" typeof="foaf:Image" />
+
+
+ 
+  </span>
+
+      
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+
+        <span class="b-tiles__title">Reducción del ruido eléctrico del ventilador de enfriamiento en su PCB</span>
+
+        <span class="b-tiles__desc">
+          
+               ¿Quién no ha abierto su PC o laptop y se ha quedado mirando largo rato sus ventiladores y disipadores de calor? Si trabajas con componentes de alta velocidad, componentes de alta frecuencia o componentes de potencia, entonces necesitarás idear algún tipo de estrategia de enfriamiento para eliminar el calor de estos componentes. A menos que quieras usar la opción nuclear e instalar una unidad de enfriamiento por evaporación o construir un sistema
+
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+                  Leer Artículo
+              </span>
+    </span>
+  </a>
+
+</div>
+</div>
+
+    </div>
+    
+
+  
+  
+
+  
+  
+</div>
+
+
+</div>
+
+          </div>
+  </div>
+</div>
+<div class="views-element-container block recent-post block-views block-views-blockdoc-posts-block-1" id="block-views-block-doc-posts-block-1">
+  
+      <h2>Documentación técnica relacionada</h2>
+    
+  <div class="recent-post__slider-tiles slider-tiles">
+    <div class="slider-tiles__nav"></div>
+    <div class="b-tiles">
+              <div><div class="js-view-dom-id-edf0eda2a4f200cc42acc0b60d3072dce52cdc3ace862e1d2ef9389588ee4cba">
+  
+  
+  
+
+  
+  
+  
+
+  <div class="b-tiles__items">
+          <div class="views-row"><div about="/taxonomy/term/5157" id="taxonomy-term-5157" class="taxonomy-term b-tiles__item vocabulary-related-docs-urls">
+  
+  
+  <a href="https://www.altium.com/documentation/altium-designer/working-with-spice-netlist" target="_blank" class="b-tiles__link">
+    <span class="b-tiles__preview">
+
+              
+<span class="b-tiles__img">
+         <img src="/sites/default/files/2023-04/Simulation_ExampleNetlist.png" width="642" height="475" alt="Working with a SPICE Netlist in Altium Designer" loading="lazy" typeof="foaf:Image" />
+
+ 
+  </span>
+
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+        
+        <span class="b-tiles__title">
+             Working with a SPICE Netlist in Altium Designer 
+      
+</span>
+        
+        <span class="b-tiles__desc">
+          
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+        Leer la documentación
+      </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div about="/taxonomy/term/5267" id="taxonomy-term-5267" class="taxonomy-term b-tiles__item vocabulary-related-docs-urls">
+  
+  
+  <a href="https://www.altium.com/documentation/altium-designer/simulation-user-interface" target="_blank" class="b-tiles__link">
+    <span class="b-tiles__preview">
+
+              
+<span class="b-tiles__img">
+         <img src="/sites/default/files/2023-04/Fig1_0.png" width="442" height="408" alt="Working with the Simulation UI in Altium Designer" loading="lazy" typeof="foaf:Image" />
+
+ 
+  </span>
+
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+        
+        <span class="b-tiles__title">
+             Working with the Simulation UI in Altium Designer 
+      
+</span>
+        
+        <span class="b-tiles__desc">
+          
+             <p>This page looks at the user interface for Altium Designer&#039;s mixed-signal circuit simulator, used for engineering analysis and verification of electrical circuits based on SPICE technology</p>
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+        Leer la documentación
+      </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div about="/taxonomy/term/5150" id="taxonomy-term-5150" class="taxonomy-term b-tiles__item vocabulary-related-docs-urls">
+  
+  
+  <a href="https://www.altium.com/documentation/altium-designer/working-with-signal-integrity-analysis-results" target="_blank" class="b-tiles__link">
+    <span class="b-tiles__preview">
+
+              
+<span class="b-tiles__img">
+         <img src="/sites/default/files/2023-04/SI_SimView_Results_AD23.png" width="1245" height="800" alt="Working with Signal Integrity Analysis Results in Altium Designer" loading="lazy" typeof="foaf:Image" />
+
+ 
+  </span>
+
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+        
+        <span class="b-tiles__title">
+             Working with Signal Integrity Analysis Results in Altium Designer 
+      
+</span>
+        
+        <span class="b-tiles__desc">
+          
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+        Leer la documentación
+      </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div about="/taxonomy/term/5234" id="taxonomy-term-5234" class="taxonomy-term b-tiles__item vocabulary-related-docs-urls">
+  
+  
+  <a href="https://www.altium.com/documentation/altium-designer/multi-board-design-overview" target="_blank" class="b-tiles__link">
+    <span class="b-tiles__preview">
+
+              
+<span class="b-tiles__img">
+         <img src="/sites/default/files/2023-04/Assembly_0.jpg" width="1200" height="787" alt="System-level Multi-board Design with Altium Designer" loading="lazy" typeof="foaf:Image" />
+
+ 
+  </span>
+
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+        
+        <span class="b-tiles__title">
+             System-level Multi-board Design with Altium Designer 
+      
+</span>
+        
+        <span class="b-tiles__desc">
+          
+             <p>This page provides an overview of Altium Designer&#039;s support for multi-board (system-level) design, covering capture of the logical system design, creation of the physical board assembly, and generation of multi-board production data</p>
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+        Leer la documentación
+      </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div about="/taxonomy/term/5148" id="taxonomy-term-5148" class="taxonomy-term b-tiles__item vocabulary-related-docs-urls">
+  
+  
+  <a href="https://www.altium.com/documentation/altium-designer/signing-in-altium-account" target="_blank" class="b-tiles__link">
+    <span class="b-tiles__preview">
+
+              
+<span class="b-tiles__img">
+         <img src="/sites/default/files/2023-04/CurrentUserIcon-notsignedintoAL.png" width="105" height="16" alt="Signing in to Your Altium Account from Altium Designer" loading="lazy" typeof="foaf:Image" />
+
+ 
+  </span>
+
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+        
+        <span class="b-tiles__title">
+             Signing in to Your Altium Account from Altium Designer 
+      
+</span>
+        
+        <span class="b-tiles__desc">
+          
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+        Leer la documentación
+      </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div about="/taxonomy/term/5153" id="taxonomy-term-5153" class="taxonomy-term b-tiles__item vocabulary-related-docs-urls">
+  
+  
+  <a href="https://www.altium.com/documentation/altium-designer/quicknav-schematic-design-objects" target="_blank" class="b-tiles__link">
+    <span class="b-tiles__preview">
+
+              
+<span class="b-tiles__img">
+         <img src="/sites/default/files/2023-04/SchematicDesignObjects2.png" width="1319" height="854" alt="QuickNav - Schematic Design Objects in Altium Designer" loading="lazy" typeof="foaf:Image" />
+
+ 
+  </span>
+
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+        
+        <span class="b-tiles__title">
+             QuickNav - Schematic Design Objects in Altium Designer 
+      
+</span>
+        
+        <span class="b-tiles__desc">
+          
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+        Leer la documentación
+      </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div about="/taxonomy/term/5154" id="taxonomy-term-5154" class="taxonomy-term b-tiles__item vocabulary-related-docs-urls">
+  
+  
+  <a href="https://www.altium.com/documentation/altium-designer/quicknav-pcb-design-objects" target="_blank" class="b-tiles__link">
+    <span class="b-tiles__preview">
+
+              
+<span class="b-tiles__img">
+         <img src="/sites/default/files/2023-04/PCBDesignObjects1-1.png" width="1353" height="878" alt="QuickNav - PCB Design Objects in Altium Designer" loading="lazy" typeof="foaf:Image" />
+
+ 
+  </span>
+
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+        
+        <span class="b-tiles__title">
+             QuickNav - PCB Design Objects in Altium Designer 
+      
+</span>
+        
+        <span class="b-tiles__desc">
+          
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+        Leer la documentación
+      </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div about="/taxonomy/term/5152" id="taxonomy-term-5152" class="taxonomy-term b-tiles__item vocabulary-related-docs-urls">
+  
+  
+  <a href="https://www.altium.com/documentation/altium-designer/preparing-design-signal-integrity-analysis" target="_blank" class="b-tiles__link">
+    <span class="b-tiles__preview">
+
+              
+<span class="b-tiles__img">
+         <img src="/sites/default/files/2023-04/SI_Dlg_ErrorsOrWarningsFound_AD23.png" width="368" height="140" alt="Preparing the Design for a Signal Integrity Analysis in Altium Designer" loading="lazy" typeof="foaf:Image" />
+
+ 
+  </span>
+
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+        
+        <span class="b-tiles__title">
+             Preparing the Design for a Signal Integrity Analysis in Altium Designer 
+      
+</span>
+        
+        <span class="b-tiles__desc">
+          
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+        Leer la documentación
+      </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div about="/taxonomy/term/5250" id="taxonomy-term-5250" class="taxonomy-term b-tiles__item vocabulary-related-docs-urls">
+  
+  
+  <a href="https://www.altium.com/documentation/altium-designer/glossing-retracing-existing-routes-pcb" target="_blank" class="b-tiles__link">
+    <span class="b-tiles__preview">
+
+              
+<span class="b-tiles__img">
+         <img src="/sites/default/files/2023-04/Mouse_L-ClkDrg_Small_Outlined_R-L_0.png" width="95" height="84" alt="Glossing &amp; Retracing of Existing Routes on a PCB in Altium Designer" loading="lazy" typeof="foaf:Image" />
+
+ 
+  </span>
+
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+        
+        <span class="b-tiles__title">
+             Glossing &amp; Retracing of Existing Routes on a PCB in Altium Designer 
+      
+</span>
+        
+        <span class="b-tiles__desc">
+          
+             <p>This page looks at the Glossing and Retrace features in the PCB Editor. Where Glossing attempts to shorten the overall route length and reduce the number of corners, Retrace re-applies the preferred width and clearance requirements to an existing route</p>
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+        Leer la documentación
+      </span>
+    </span>
+  </a>
+
+</div>
+</div>
+    <div class="views-row"><div about="/taxonomy/term/5233" id="taxonomy-term-5233" class="taxonomy-term b-tiles__item vocabulary-related-docs-urls">
+  
+  
+  <a href="https://www.altium.com/documentation/altium-designer/generating-production-data-multi-board-design" target="_blank" class="b-tiles__link">
+    <span class="b-tiles__preview">
+
+              
+<span class="b-tiles__img">
+         <img src="/sites/default/files/2023-04/MultiBoard_AddActiveBOM_20-0_0.png" width="1415" height="1085" alt="Generating Production Data for a Multi-board Design in Altium Designer" loading="lazy" typeof="foaf:Image" />
+
+ 
+  </span>
+
+      
+    </span>
+
+    <span class="b-tiles__body">
+      <span class="b-tiles__body-in">
+        
+        <span class="b-tiles__title">
+             Generating Production Data for a Multi-board Design in Altium Designer 
+      
+</span>
+        
+        <span class="b-tiles__desc">
+          
+             <p>This page looks at generating production data at the system level, ensuring that all component information, reports and files represent the complete product design</p>
+ 
+      
+
+        </span>
+      </span>
+      <span class="b-tiles__btn">
+        Leer la documentación
+      </span>
+    </span>
+  </a>
+
+</div>
+</div>
+
+    </div>
+    
+
+  
+  
+
+  
+  
+</div>
+
+
+</div>
+
+          </div>
+  </div>
+</div>
+
+
+        <div class="b-post__link-back-wrap">
+          <a href="https://resources.altium.com/es" class="link-back">Volver a la Pàgina de Inicio</a>
+        </div>
+
+      </div>
+
+      <div class="content-wrapper__sidebar sidebar  _style-with-bg _style-sticky">
+        <!-- sidebar_begin -->
+                      <div class="paragraph eg_section_internal paragraph--type--sidebar-widget paragraph--view-mode--full"">
+              <div class="eg-heading">
+          
+             <article class="media media--type-icon media--view-mode-default">
+  
+      
+         <img src="/sites/default/files/2023-12/logo-ad-black.svg" alt="Altium Designer Logo" loading="lazy" typeof="foaf:Image" />
+
+ 
+  
+  </article>
+ 
+      
+
+        </div>
+        <div class="eg_body">
+          <h3>
+             Aproveche el sistema<br>de diseño de PCB más<br>confiable del mundo. 
+      
+</h3>
+          <div class="eg_bullets">
+            
+             <p class="eg_bullet">Una interfaz. Un modelo de datos. Infinitas posibilidades.</p>
+
+<p class="eg_bullet">Colabore sin esfuerzo con diseñadores mecánicos.</p>
+
+<p class="eg_bullet">La plataforma de diseño de PCB&nbsp;más confiable del mundo.</p>
+
+<p class="eg_bullet">Enrutamiento interactivo de primera clase.</p>
+ 
+      
+
+                          <a class="eg_btn" target="_blank" href="https://www.altium.com/es/altium-designer/licensing">
+                <p>Ver Opciones de Licencia</p>
+              </a>
+                      </div>
+        </div>
+          </div>
+
+
+
+                <div data-sticky-top="180"
+             data-stop-sticky-parent=".content-wrapper"
+             data-sticky-stop-bot="240"
+             class="form-sidebar-sticky _style-sticky">
+          
+          <div id="block-try-altium-designer" class="block block-block-content block-block-content24db3577-ac88-4d82-9512-b3d1da85ef80 form-sidebar-sticky__wrap">
+  
+  
+          
+      <div class="form-sidebar-sticky__header">
+                  <h3>Prueba Altium Designer</h3>
+          
+             <p>Consigue Altium Designer <strong>gratis durante 2 semanas</strong></p>
+ 
+      
+
+              </div>
+      <div class="form-sidebar-sticky__form">
+        <div class="form-sidebar-sticky__control"></div>
+
+        <div class="form-sidebar">
+
+          <div class="form-sidebar__head">
+                          <h3></h3>
+              
+             <p>Consigue Altium Designer <strong>gratis durante 2 semanas</strong></p>
+ 
+      
+
+                      </div>
+                      <div id="am-mktoForm-step-1">
+              <form class="am-form am-mktoForm" id="mktoForm_13797">
+                <div class="am-loader"><span></span><span></span><span></span></div>
+              </form>
+            </div>
+                    <div id="am-mktoForm-step-2"
+                              style="display: none;"
+                        >
+            <form class="am-form am-mktoForm" id="mktoForm_13798">
+              <div class="am-loader"><span></span><span></span><span></span></div>
+            </form>
+          </div>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+                          MktoForms2.setOptions({formXDPath:"/rs/817-SFW-071/images/marketo-xdframe-relative.html"});
+              MktoForms2.loadForm("//go.altium.com", "817-SFW-071", 13797);
+              new FormMkto({
+                id: 13797,
+                onSuccessHandler: function () {
+                  var formStep1 = document.querySelector('#am-mktoForm-step-1');
+                  var formStep2 = document.querySelector('#am-mktoForm-step-2');
+                  if(formStep1 && formStep2) {
+                    var Email1 = formStep1.querySelector('input[name="Email"]');
+                    var Email2 = formStep2.querySelector('input[name="Email"]');
+
+                    if(Email1 && Email2) {
+                      Email2.value = Email1.value;
+                    }
+
+                    formStep1.style.display = `none`;
+                    formStep2.style.display = `block`;
+                  }
+
+                  return false;
+                }
+              });
+            
+            MktoForms2.setOptions({formXDPath:"/rs/817-SFW-071/images/marketo-xdframe-relative.html"});
+            MktoForms2.loadForm("//go.altium.com", "817-SFW-071", 13798);
+            new FormMkto({
+              id: 13798,
+              onSuccessHandler: function (form) {
+                jQuery.cookie("altium_thank_you_referer", "node:558673596", { expires : 1, path: '/' });
+                var isStudent = form && form.student && form.student.trim().toLowerCase() === 'yes';
+                location.href = isStudent ? '/es/free-trial/thank-you/student' : '/es/free-trial/thank-you';
+
+                return false;
+              }
+            });
+          });
+        </script>
+      </div>
+      </div>
+
+        </div>
+        <!-- sidebar_end -->
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="b-toaster _successful" id="form-subscribe-toaster">
+  <div class="b-toaster__inner">
+    <div class="b-toaster__content">
+      <div class="b-toaster__ico">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11.4" cy="11.4" r="10.9" stroke="white"/>
+          <path d="M6 11L10.2 15.2L17.2 8.2" stroke="white"/>
+        </svg>
+      </div>
+      <div class="b-toaster__text">
+        <b>Thank you, you are now subscribed to updates.</b>
+      </div>
+    </div>
+    <div class="b-toaster__close">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.24309 0.757355L5.00045 5M0.757813 9.24263L5.00045 5M5.00045 5L0.757812 0.757355M5.00045 5L9.24309 9.24264" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
+<div class="modal modal_update-subscribe fade" id="modal-update-subscribe" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal__dialog modal__dialog_v-centered">
+    <div class="modal__content">
+      <button type="button" id="subscribe-modal-close" class="modal__close" data-dismiss="modal" aria-hidden="true"></button>
+      <div class="f-update-subscribe">
+        <div class="f-startup__form">
+          <div id="form-update-subscribe-1">
+            <form class="wds-formV2" data-mkform-id="17148">
+              <div class="wds-loader"></div>
+              <div class="modal__head">
+                <h2>Don’t miss updates</h2>
+              </div>
+            </form>
+            <script>
+	            var localStorageName = "subscribeFormSubmit";
+	            var bodySubmitClass = "_subscribe-form-submit";
+	            if (localStorage.getItem(localStorageName)) {
+		            document.querySelector('body').classList.add(bodySubmitClass);
+	            }
+
+					    document.addEventListener("DOMContentLoaded", () => {
+						    new WdsFormV2({
+							    ids: [17148],
+							    submitBtnClassNames: "wds-form-submit wds-btn _medium _primary _wide",
+							    onLoad: (form) => {
+								    form.onSuccess((values, followUpUrl) => {
+									    localStorage.setItem(localStorageName, "true");
+									    document.querySelector('#subscribe-modal-close').click();
+									    document.querySelector('body').classList.add(bodySubmitClass);
+
+									    setTimeout(() => {
+										    document.querySelector('#form-subscribe-toaster').classList.add("_active");
+									    }, 500);
+									    return false;
+								    })
+							    }
+						    });
+					    });
+
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  </div>
+
+
+              <div >
+            <div class="paragraph block-media paragraph--type--content-banner paragraph--view-mode--default" data-content-banner style="display:none;">
+              <div class="block-media__inner">
+          <div class="block-media__desc">
+            <div class="block-media__logo">
+              
+             <article class="media media--type-icon media--view-mode-default">
+  
+      
+         <img src="/sites/default/files/2022-08/logo-altium-d.svg" alt="logo-altium" loading="lazy" typeof="foaf:Image" />
+
+ 
+  
+  </article>
+ 
+      
+
+            </div>
+            <div class="block-media__text">
+              <h5>
+             Easy, Powerful, Modern 
+      
+</h5>
+              
+             <p>The world’s most trusted PCB design system.</p>
+ 
+      
+
+            </div>
+          </div>
+                      <div class="block-media__btn-wrap">
+              <a class="btn btn_style-blue btn_size-sm" href="https://www.altium.com/altium-designer/?promo_name=tag-pcb-design&amp;promo_position=resources-mid-content&amp;promo_creative=es-learn-more-1770&amp;TrackingId=OM21">Learn More</a>
+            </div>
+                  </div>
+          </div>
+  
+            <div class="paragraph block-media paragraph--type--content-banner paragraph--view-mode--default" data-content-banner style="display:none;">
+              <div class="block-media__inner">
+          <div class="block-media__desc">
+            <div class="block-media__logo">
+              
+             <article class="media media--type-icon media--view-mode-default">
+  
+      
+         <img src="/sites/default/files/2022-08/logo-altium-d.svg" alt="logo-altium" loading="lazy" typeof="foaf:Image" />
+
+ 
+  
+  </article>
+ 
+      
+
+            </div>
+            <div class="block-media__text">
+              <h5>
+             Diseño de PCB&lt;br&gt;de alta velocidad 
+      
+</h5>
+              
+             <p>Soluciones sencillas para los desafíos del diseño de alta velocidad</p>
+ 
+      
+
+            </div>
+          </div>
+                      <div class="block-media__btn-wrap">
+              <a class="btn btn_style-blue btn_size-sm" href="https://www.altium.com/altium-designer/features/high-speed-design?promo_name=tag-high-speed-design&amp;promo_position=resources-mid-content&amp;promo_creative=es-explore-solutions-1608&amp;TrackingId=OM21">Explorar soluciones</a>
+            </div>
+                  </div>
+          </div>
+  
+            <div class="paragraph block-media paragraph--type--content-banner paragraph--view-mode--default" data-content-banner style="display:none;">
+              <div class="block-media__inner">
+          <div class="block-media__desc">
+            <div class="block-media__logo">
+              
+             <article class="media media--type-icon media--view-mode-default">
+  
+      
+         <img src="/sites/default/files/2022-08/logo-altium-d.svg" alt="logo-altium" loading="lazy" typeof="foaf:Image" />
+
+ 
+  
+  </article>
+ 
+      
+
+            </div>
+            <div class="block-media__text">
+              <h5>
+             SPICE: Certainty for All Decisions 
+      
+</h5>
+              
+             <p>Design, validate, and verify the most advanced schematics.</p>
+ 
+      
+
+            </div>
+          </div>
+                      <div class="block-media__btn-wrap">
+              <a class="btn btn_style-blue btn_size-sm" href="https://www.altium.com/altium-designer/features/spice-simulation?promo_name=tag-simulation-and-analysis&amp;promo_position=resources-mid-content&amp;promo_creative=es-learn-more-1631&amp;TrackingId=OM21">Learn More</a>
+            </div>
+                  </div>
+          </div>
+  
+            <div class="paragraph block-media paragraph--type--content-banner paragraph--view-mode--default" data-content-banner style="display:none;">
+              <div class="block-media__inner">
+          <div class="block-media__desc">
+            <div class="block-media__logo">
+              
+             <article class="media media--type-icon media--view-mode-default">
+  
+      
+         <img src="/sites/default/files/2022-08/logo-altium-d.svg" alt="logo-altium" loading="lazy" typeof="foaf:Image" />
+
+ 
+  
+  </article>
+ 
+      
+
+            </div>
+            <div class="block-media__text">
+              <h5>
+             Easy, Powerful, Modern 
+      
+</h5>
+              
+             <p>The world’s most trusted PCB design system.</p>
+ 
+      
+
+            </div>
+          </div>
+                      <div class="block-media__btn-wrap">
+              <a class="btn btn_style-blue btn_size-sm" href="https://www.altium.com/altium-designer/?promo_name=tag-altium-designer&amp;promo_position=resources-mid-content&amp;promo_creative=es-explore-solutions-1618&amp;TrackingId=OM21">Explore Solutions</a>
+            </div>
+                  </div>
+          </div>
+  
+        
+  </div>
+
+      
+    </div>
+  </div>
+  <link href="https://cdn-shared.altium.com/production/owned-media/public/css/index.css?t=1712163365" rel="stylesheet" type="text/css">
+  <script src="https://cdn-shared.altium.com/production/owned-media/public/js/index.bundle.js?t=1712163365"></script>
+  <script>
+    new window.OwnedMedia({
+      selector: '.s-header',
+      position: 'append',
+      excludePageBySelector: '',
+      excludePageByUrl: '/company,/all-promotions,/circuitstudio,/viewer'
+    });
+  </script>
+</div>
+<div class="modal modal_zoom-screen fade" id="modal-zoom-screen-one" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal__dialog modal__dialog_v-centered">
+    <div class="modal__content">
+      <button type="button" class="modal__close" data-dismiss="modal" aria-hidden="true"></button>
+      <div class="modal__screen">
+        <div class="modal__screen__img">
+          <div class="modal__screen__img-wrap"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-v2 " id="altium-navigation-footer"></div>
+<script src="https://cdn-shared.altium.com/production/navigation_new/app/dist/footer.js"></script>
+
+
+  </div>
+
+    
+    <script src="/sites/default/files/js/js_v2YRp_V9pS3rGW9jLU8DfEhbOEy9ltnl2IHzjAgbSl4.js?scope=footer&amp;delta=0&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_mI35yr4D2OeVTXWlMCLh8DOS39P8RfdDbF_57dlDkdQ.js?scope=footer&amp;delta=2&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY"></script>
+<script src="https://cdn-shared.altium.com/production/altium-all-pages/dist/main.js"></script>
+<script src="/sites/default/files/js/js_GgfnDZZGQMHxEAzWM7P3-E0IlKNwEvp1TxhCwHtsmKQ.js?scope=footer&amp;delta=4&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY"></script>
+<script src="https://cdn-shared.altium.com/production/altium-all-pages/dist/components/bCountdown/bCountdown.min.js"></script>
+<script src="https://cdn-shared.altium.com/development/wds/dist/components/wds-formV2/wds-formV2.min.js"></script>
+<script src="https://cdn-shared.altium.com/development/wds/dist/components/wds-sticky/wds-sticky.min.js"></script>
+<script src="https://cdn-shared.altium.com/production/wds/dist/components/wds-sticky-v2/wds-sticky-v2.min.js"></script>
+<script src="/sites/default/files/js/js_wGkX45rZpptLQv_0GDidj8SjDdoms6etaPtVfZTux60.js?scope=footer&amp;delta=9&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY"></script>
+<script src="https://cdn-shared.altium.com/production/navigation_new/app/dist_prod_server_html/header.js" rel="preload"></script>
+<script src="/sites/default/files/js/js_OinsSy1bIWrMwbr8Te_zDxJBCiRwPWiJb0jd8STQZQY.js?scope=footer&amp;delta=11&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY"></script>
+<script src="https://cdn-shared.altium.com/production/dams/dams.min.js" site="resources"></script>
+<script src="/sites/default/files/js/js_e1tgBrsVG4KZrmgt3ijlgcRjQsK04btUeWqMhXEg0FI.js?scope=footer&amp;delta=13&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+<script src="/sites/default/files/js/js_TFqioWxQo8o1K4FcGZd1M8qEs_ZCcuTrv3lhAAgOKDc.js?scope=footer&amp;delta=15&amp;language=es&amp;theme=altium&amp;include=eJyNUtFyAiEM_CHueOn_MIHEM8oBJnD2_Pqinlqn7UxfMssmZNkEQKwZ0mphA-NOcqoGYuU2u-S12G_4wesehNAWyThCjK7ARPpMtkKiQbhU-5MyES6rvQYjsFCyt2h01Uqz9aBkQgTV9Q3PpHrTCFnIpiwzRL7QJmmnmD3EQesaOU0PdmFcQXBYPkwBgUmg7NWitAJxfDFjS6X5yLonfHgIfQiUqvOQEol9PxqtUFkrh2e3F2MWprPaWxznjC12E9t1aMjVhaY1z_bUOBzvlNlxrFcZKJVzek4fFp7gyjgfcziq3RNg19_ygMs24KHD39nBQzhSwiHklqrwa03h8CgLhz9sKyN5EHdmnOj5KRBmva3eeKr92Y4-S1ZCd3ehdqJ-GWLfHfdm1yZu6evCu5XDqZGsNizjHY1bjv5b3_30mWX5AgWaFIY"></script>
+
+    <script type="text/javascript" src="https://cdn-shared.altium.com/production/altium-live-event/live.js"></script>
+
+    <script src="https://cdn-shared.altium.com/production/drift/driftChat.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new window.DriftChat({
+          hideDefaultDriftChatBtn: false,
+        });
+      });
+    </script>
+  </body>
+</html>

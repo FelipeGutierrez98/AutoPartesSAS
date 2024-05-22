@@ -1,0 +1,157 @@
+  .contenido-productos {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../assets/repuestos-carros-banner.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+ 
+}
+
+/* .contenido-header .fondo {
+  width: 0%;
+  height: 100%;
+  max-width: 100%;
+  background-image: url(../assets/bg-separator.jpeg);
+  
+} */
+.containerPro{
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en una columna */
+  justify-content: center; /* Alinea los elementos al final del contenedor */
+  align-items: flex-end; /* Centra horizontalmente los elementos */
+  height: 80vh;
+  padding-right: 200px;
+}
+.logo1{
+  width: 100%;
+  height: 100%;
+  
+}
+
+.parrafoPro{
+padding-bottom: 30px;
+color: white;
+font-size: 55px;
+font-weight: bolder;
+text-align: center;
+font-family: 'Permanent Marker', cursive;
+}
+
+.container {
+    border: 1px solid var(--purple-medium);
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  /* .productos {
+    background: var(--gray-light);
+    padding: 50px;
+    margin-bottom: 30px;
+  } */
+  /*
+  para que despliegue el de la lado en los productos Y LUEGO HACER HOVER SE CRECE EL 100 % */
+  .logo1{
+    height: 350px;
+
+  }
+  .productos {
+    height: 1000px;
+    padding-top: 30px 0 30px 0;
+    display: flex;
+    align-items: center;
+    
+  }
+  .productos .titulo {
+    width: 70%;
+    font-size: 44px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+  }
+
+  .product-principal{
+    display: grid;
+    
+    grid-template-columns: repeat(3,1fr);
+
+  
+    
+    
+
+  }
+  
+  .cart{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .productos .producto {
+    position: relative; 
+    width: 400px;
+    border: 1px solid black;
+  
+  }
+  
+  
+  .productos .overlay {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+/*     background: var(--purple-light); */
+    overflow: hidden;
+    transition: 0.5s ease;
+    background-position: center;
+   background-color: #2b2d42;;
+
+    /* VA A ESTAR EN 0 PORICENTO PARA ESTAR ESCONDIDO */
+  }
+  .overlay a {
+    text-decoration: none;
+    color: rgb(205, 49, 49);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+  }
+  .productos .producto:hover .overlay {
+    width: 100%;
+    opacity: 0.8;
+  }
+  
+  .productos .producto .overlay-texto {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    white-space: nowrap;
+    color: var(--white);
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+  
+  .productos .btn-productos {
+    background-color: var(--purple-medium);
+    color: #fff;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .productos .btn-productos:hover {
+    background-color: transparent;
+    border: 2px solid var(--purple-light);
+    color: var(--purple-light);
+  }
+  .productos .btn-productos a {
+    color: white;
+  }
+  .productos .btn-productos:hover a {
+    color: var(--purple-light);
+    text-decoration: none;
+  } 

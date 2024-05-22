@@ -1,0 +1,96 @@
+.Marcas{
+width: 100%;
+height: 400px;
+background-color: #10163c;
+display: flex;
+justify-content: center;
+}
+h1{
+    color: white;
+}
+.box{
+    box-shadow: 0 0 12px white;
+}
+
+.banner{
+    height: 200px;
+    width: 200px;
+}
+
+.contenido-Marcas {
+    width: 100%;
+    height: 80vh;
+    background-image: url(../assets/nuevo-sedan-m7-totalmente-electrico-bmws-listo-salir-pista-generative-ai_900396-32780.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+   
+  }
+  
+  /* .contenido-header .fondo {
+    width: 0%;
+    height: 100%;
+    max-width: 100%;
+    background-image: url(../assets/bg-separator.jpeg);
+    
+  } */
+  .containerMar{
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: center; /* Alinea los elementos al final del contenedor */
+    align-items: flex-end; /* Centra horizontalmente los elementos */
+    height: 80vh;
+    padding-right: 200px;
+  }
+  .logo1{
+    width: 30%;
+  }
+  .parrafoMar{
+  padding-bottom: 30px;
+  color: white;
+  font-size: 55px;
+  font-weight: bolder;
+  text-align: center;
+  }
+  
+
+
+
+.partner {
+  display: flex;
+  margin:  auto;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap:50px
+  
+}
+
+.logo-container img {
+  height: 140px;
+ /*  height: 75px;
+  object-fit: contain;
+  object-position: center; */
+  filter: grayscale(1);
+  opacity: 0.3;
+}
+
+.provedores{
+  color: white;
+  font-size: 60px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.logo-container img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transition: all ease 0.3s;
+}

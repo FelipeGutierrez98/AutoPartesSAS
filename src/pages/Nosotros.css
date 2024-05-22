@@ -1,0 +1,167 @@
+
+/* Nosotros.css */
+
+.contenido-Nosotros {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../assets/nos.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+ 
+}
+
+/* .contenido-header .fondo {
+  width: 0%;
+  height: 100%;
+  max-width: 100%;
+  background-image: url(../assets/bg-separator.jpeg);
+  
+} */
+.containerMar{
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en una columna */
+  justify-content: center; /* Alinea los elementos al final del contenedor */
+  align-items: flex-end; /* Centra horizontalmente los elementos */
+  height: 80vh;
+  padding-right: 200px;
+  font-family: 'Permanent Marker', cursive;
+}
+/* .logo1{
+  width: 30%;
+} */
+.parrafoMar{
+padding-bottom: 30px;
+color: white;
+font-size: 55px;
+font-weight: bolder;
+text-align: center;
+}
+
+
+
+.position{
+background-color: #edf2f4 ;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+.nosotros-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 80vw;
+  height: 700px;
+  }
+
+
+  .boton{
+    background-color: #2b2d42;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #f1f1f1;
+      list-style: none;
+      text-decoration: none;
+      font-family: 'Permanent Marker', cursive;
+     
+      
+
+  }
+  button:hover{
+    background-color: #da1515;
+  }
+  
+  
+  /* .imagen-container {
+    
+    margin-right: 20px;
+    position: relative; 
+    background-color: aqua;
+    
+  } */
+
+  .img2{
+    width: 50%;
+    height: 500px;
+  }
+  /* 
+  .imagen-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    
+     background-color:  #b45d3a
+  } */
+  
+ /*  .imagen-container img {
+    max-width: 100%;
+    height: auto;
+    background-color: #42d43d; 
+  } */
+  
+  .texto-container {
+  
+/*     background-color: black; */
+    width: 50%;
+    
+
+  }
+  
+  .texto-container p {
+    font-size: 20px;
+    line-height: 1.5;
+    padding-left: 30px;
+  }
+
+   
+.linea{
+  width: 2px;
+  background-color: #2b2d42;
+  height: 80%;
+
+}
+   
+.linea2{
+  width: 100%;
+  background-color: #2b2d42;
+  height:  2px;
+  
+}
+.boton{
+  margin-left: 100px;
+  margin-top: 50px;
+  height: 60px;
+  width: 100px;
+}
+
+
+
+
+  .partner {
+    margin: 100px auto;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .logo-container img {
+    height: 55px;
+    object-fit: contain;
+    object-position: center;
+    filter: grayscale(1);
+    opacity: 0.3;
+  }
+  
+  .logo-container img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    transition: all ease 0.3s;
+  }
+

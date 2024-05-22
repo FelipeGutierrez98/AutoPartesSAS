@@ -1,0 +1,6 @@
+.product-list {
+    display: flex; /* Utiliza display: flex para distribuir los productos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    gap: 20px; /* Espacio entre los productos */
+  }
+  

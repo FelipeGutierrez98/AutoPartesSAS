@@ -1,0 +1,102 @@
+/* styles.css */
+.pos{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 30px 0;
+}
+.formulario {
+  width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+  height: 800px;
+  
+}
+.formulario h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1f376c;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 5px;
+  color: #1f376c;
+  font-size: 20px;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.campo input[type="tel"] {
+  width: calc(50% - 6px); /* Para hacer que los campos de teléfono sean del mismo tamaño */
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+  border-color: #1f376c;
+}
+
+.campo button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1f376c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.campo button:hover {
+  background-color: rgb(205, 49, 49)
+}
+
+.campo button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+.success-message {
+  color: green;
+  font-size: 12px;
+}

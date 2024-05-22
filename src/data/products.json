@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "name": "Correas",
+      "image": "/src/assets/correa-auxiliar-accesorios-airedirec-suzuki-swift-alto-maru-D_NQ_NP_15784-MLA20107987824_062014-F.jpg",
+      "category": "Oil",
+      "brand": "BrandX",
+      "price": 25.99,
+      "description": "High-quality engine oil for optimal performance."
+    },
+    {
+      "id": 2,
+      "name": "Brake Pads",
+      "image": "https://content2.kawasaki.com/ContentStorage/KMC/Products/8798/8c85b065-f4e9-4ee6-966f-2b7993daff08.png?w=767",
+      "category": "Brakes",
+      "brand": "BrandY",
+      "price": 39.99,
+      "description": "Durable brake pads for safe stopping."
+    },
+    {
+      "id": 2,
+      "name": "Brake Pads",
+      "image": "https://content2.kawasaki.com/ContentStorage/KMC/Products/8798/8c85b065-f4e9-4ee6-966f-2b7993daff08.png?w=767",
+      "category": "Brakes",
+      "brand": "BrandY",
+      "price": 39.99,
+      "description": "Durable brake pads for safe stopping."
+    },
+    {
+      "id": 2,
+      "name": "Brake Pads",
+      "image": "https://content2.kawasaki.com/ContentStorage/KMC/Products/8798/8c85b065-f4e9-4ee6-966f-2b7993daff08.png?w=767",
+      "category": "Brakes",
+      "brand": "BrandY",
+      "price": 39.99,
+      "description": "Durable brake pads for safe stopping."
+    },
+    {
+      "id": 2,
+      "name": "Brake Pads",
+      "image": "https://content2.kawasaki.com/ContentStorage/KMC/Products/8798/8c85b065-f4e9-4ee6-966f-2b7993daff08.png?w=767",
+      "category": "Brakes",
+      "brand": "BrandY",
+      "price": 39.99,
+      "description": "Durable brake pads for safe stopping."
+    },
+    {
+      "id": 2,
+      "name": "Brake Pads",
+      "image": "https://content2.kawasaki.com/ContentStorage/KMC/Products/8798/8c85b065-f4e9-4ee6-966f-2b7993daff08.png?w=767",
+      "category": "Brakes",
+      "brand": "BrandY",
+      "price": 39.99,
+      "description": "Durable brake pads for safe stopping."
+    }
+  ]
+  
