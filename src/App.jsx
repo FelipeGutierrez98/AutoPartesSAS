@@ -33,6 +33,7 @@ const App = () => {
         {/* <div className='img'></div> */}
         <Header />
         <Routes>
+          <Route path="/" element={<Inicio />} />
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/marcas" element={<Marcas />} />
