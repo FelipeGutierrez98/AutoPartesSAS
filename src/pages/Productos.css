@@ -38,11 +38,11 @@ text-align: center;
 font-family: 'Permanent Marker', cursive;
 }
 
-.container {
+/* .container {
     border: 1px solid var(--purple-medium);
     margin-top: 20px;
-    margin-bottom: 50px;
-  }
+    margin-bottom: 50px; 
+  } */
   /* .productos {
     background: var(--gray-light);
     padding: 50px;

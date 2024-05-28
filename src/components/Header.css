@@ -201,7 +201,7 @@ font-size: 25px;
  
 
   @media (max-width: 1200px) {
-  
+   
   
     .header {
       /* Reduce la altura del header */
@@ -215,8 +215,7 @@ font-size: 25px;
     
     .linkUnidad {
       margin-right: 50px; /* Espaciado entre enlaces */
-      text-decoration: none; /* Elimina el subrayado */
-      color: rgb(0, 0, 0); /* Establece el color del texto a negro */
+
       transition: color 0.3s; /* Añade una transición para cambios de color */
       transform: scale(1.1);
       font-size: 20px;
@@ -225,42 +224,18 @@ font-size: 25px;
       
     }
   }
-  @media (max-width: 720px) {
-    .header {
-      /* Reduce la altura del header */
-      display: flex;
-      justify-content: space-between; /* Mantiene el espacio entre elementos */
-    }
-    .logo {
-      height: 100px;
-      margin-right: 40px;
-    }
-    .linkUnidad {
-      margin-right: 40px; /* Espaciado entre enlaces */
-      text-decoration: none; /* Elimina el subrayado */
-      color: rgb(0, 0, 0); /* Establece el color del texto a negro */
-      transition: color 0.3s; /* Añade una transición para cambios de color */
-      transform: scale(1.1);
-      font-size: 25px;
-      
-      
-     
-      
-      
-    }
-  }
+ 
     
-    @media (max-width:768px) {
+    @media screen and (min-width:610px) and (max-width:768px) {
     .po{
-      height: 370px
+      height: 300px;
+      width: 100%;
     }
     
     .linkUnidad {
-    margin-right: 100px; /* Espaciado entre enlaces */
-    text-decoration: none; /* Elimina el subrayado */
-    color: rgb(0, 0, 0); /* Establece el color del texto a negro */
-    transition: color 0.3s; /* Añade una transición para cambios de color */
-    transform: scale(1.1);
+
+
+
     font-size: 27px;
     text-align: center;
     padding-top: 20px;
@@ -281,17 +256,12 @@ font-size: 25px;
     }
   
     @media (max-width:991px) {
-    .po{
-      height: 250px;
-      width: 100%;
-    }
+  
     
     .linkUnidad {
-    margin-right: 100px; /* Espaciado entre enlaces */
-    text-decoration: none; /* Elimina el subrayado */
-    color: rgb(0, 0, 0); /* Establece el color del texto a negro */
-    transition: color 0.3s; /* Añade una transición para cambios de color */
-    transform: scale(1.1);
+   
+   
+
     font-size: 25px;
     text-align: center;
     padding-top: 20px;
@@ -312,20 +282,17 @@ font-size: 25px;
     }
   
   
-    @media (max-width:510px) {
+    @media (max-width:610px) {
     .po{
-      height: 200px;
+      height: 240px;
       width: 100%;
     
     }
     
     .linkUnidad {
-    margin-right: 100px; /* Espaciado entre enlaces */
-    text-decoration: none; /* Elimina el subrayado */
-    color: rgb(0, 0, 0); /* Establece el color del texto a negro */
-    transition: color 0.3s; /* Añade una transición para cambios de color */
-    transform: scale(1.1);
-    font-size: 15px;
+   
+    
+    font-size: 18px;
     padding-top: 20px;
     
       margin:0 auto;
