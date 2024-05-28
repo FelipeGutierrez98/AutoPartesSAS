@@ -55,7 +55,7 @@ font-family: 'Permanent Marker', cursive;
 
   }
   .productos {
-    height: 1000px;
+    height: 100%;
     padding-top: 30px 0 30px 0;
     display: flex;
     align-items: center;
@@ -154,4 +154,134 @@ font-family: 'Permanent Marker', cursive;
   .productos .btn-productos:hover a {
     color: var(--purple-light);
     text-decoration: none;
-  } 
+  } /* 
+  @media screen and (max-width:900px){
+    
+  .product-principal{
+    display: grid; 
+    grid-template-columns: repeat(2,1fr)
+  }
+  .productos {
+    height: 100%;
+    padding-top: 30px 0 30px 0;
+    display: flex;
+    align-items: center;
+    
+  }
+  .productos .producto {
+     position: relative;  
+    width: 350px;
+    border: 1px solid black;
+  
+  }
+  } */
+
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+  
+  .product-principal{
+    display: grid; 
+    grid-template-columns: repeat(3,1fr)
+  }
+ 
+  .productos .producto {
+     position: relative;  
+    width: 350px;
+    border: 1px solid black;
+  
+  }
+}
+@media only screen and (min-width: 1001px) and (max-width: 1200px) {
+  
+  .product-principal{
+    display: grid; 
+    grid-template-columns: repeat(2,1fr)
+  }
+ 
+  .productos .producto {
+     position: relative;  
+    width: 470px;
+    border: 1px solid black;
+  
+  }
+}
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+  
+  .product-principal{
+    display: grid; 
+    grid-template-columns: repeat(2,1fr)
+  }
+ 
+  .productos .producto {
+     position: relative;  
+    width: 360px;
+    border: 1px solid black;
+  
+  }
+}
+
+  
+  @media screen and (max-width:800px){
+    
+    
+  .product-principal{
+    display: grid; 
+    grid-template-columns: repeat(1,1fr)
+  }
+  .productos {
+    height: 100%;
+    padding-top: 30px 0 30px 0;
+    display: flex;
+    align-items: center;
+    
+  }
+  .productos .producto {
+     position: relative;  
+    width: 350px;
+    border: 1px solid black;
+  
+  }
+  }
+  @media screen and (max-width:500px){
+      .contenido-productos {
+       
+        width: 100%;
+        height: 40vh!important;
+        background-image: url(../assets/repuestos-carros-banner.png);
+        
+        
+    
+      
+       
+      }
+      .parrafoPro{
+        padding-bottom: 30px;
+        color: white;
+        font-size: 30px!important;
+        font-weight: bolder;
+       margin-bottom: 200px;
+    
+       
+        }
+  .pro{
+    height: 1400px;
+  }
+  .product-principal{
+    display: grid; 
+    grid-template-columns: repeat(1,1fr)
+  }
+  
+  .productos .producto {
+     position: relative;  
+    width: 350px;
+    border: 1px solid black;
+  
+  }
+  .productos {
+    height: 100%;
+    padding-top: 30px 0 30px 0;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  }

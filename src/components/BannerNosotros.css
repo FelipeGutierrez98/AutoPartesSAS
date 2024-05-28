@@ -1,0 +1,44 @@
+.sobre-mi {
+    height: 600px;
+    padding: 10px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+  }
+  
+  .sobre-mi .contenedor {
+    max-width: 400px;
+    text-align: center;
+    
+    
+  }
+  i{
+    font-size: 50px;
+  }
+
+  @media screen and (max-width:1300px) {
+    .sobre-mi{
+      width: 100vw;
+      height: 100%;
+    padding: 10px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 38px;
+    }
+   
+  }
+  @media screen and (max-width:600px) {
+    .sobre-mi{
+      width: 100vw;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .r{
+      display: none;
+    }
+    .c{
+      display: none;
+    }
+  }

@@ -36,7 +36,7 @@ width :914px;
     background-image: url(../assets/vehicules.jpeg);
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; 
   }
   
   /* .contenido-header .fondo {
@@ -84,4 +84,47 @@ width :914px;
   padding-top: 30px;
 }
 
+@media screen and (min-width:300px)and (max-width:600px) {
+ 
+
+
+ 
+  .parrafo{
+    padding-bottom: 30px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width:601px) and (max-width:800px) {
+ 
+
+
+ 
+  
+  .parrafo{
+    padding-bottom: 30px;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width:801px) and (max-width:1000px) {
+ 
+
+
+ 
+
+  .parrafo{
+    padding-bottom: 30px;
+    color: white;
+    font-size:30px;
+    font-weight: bolder;
+    text-align: center;
+  }
+}
 

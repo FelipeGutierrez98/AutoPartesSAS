@@ -3,7 +3,7 @@
 .footer {
     color: #fff;
     display: flex;
-    padding-top: 30px;
+    padding-top: 10px;
   }
   
   .container-footer{
@@ -88,3 +88,9 @@ font-size: 80px;
   margin-bottom: 25px;
 font-family: 'Permanent Marker', cursive; 
 */
+@media screen and (max-width:700px) {
+  .footer-content {
+    display:flex ;
+    flex-direction: column;
+  }
+}

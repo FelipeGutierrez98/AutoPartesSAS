@@ -6,6 +6,7 @@ import BannerInicio from '../components/BannerInicio'
 import logo from '../assets/Copia de GEA-Photoroom.png-Photoroom.png'
 import './Inicio.css'
 import nosotrosImg from '../../src/assets/repuesto.co-partes-circulo.png'
+import frenis from '../assets/repuestos.png'
 import logo1 from '../assets/kia.png'
 import logo2 from '../assets/Chevrolet_logo.png'
 import logo3 from '../assets/479674a60c207959061a59789d4ea586-Photoroom.png-Photoroom.png'
@@ -55,14 +56,14 @@ const Inicio = () => {
             En GEA, nos dedicamos apasionadamente a proporcionar soluciones integrales para las necesidades de repuestos automotrices. Con un compromiso inquebrantable hacia la calidad y la excelencia en el servicio al cliente, nos enorgullece ser líderes en la industria de distribución de partes de carros. 
           </p>
            
-          <p>
+          <p className='e'>
           Nuestro equipo altamente capacitado y experimentado se esfuerza por ofrecer una amplia gama de productos de la más alta calidad, asegurando así la satisfacción y confianza de nuestros clientes. 
           </p>
          
 
           
             <div className='linea2'></div>
-            <button className='boton'>
+            <button className='boton e'>
               
             <Link to="/contacto" className='button'>+ Info</Link>
             </button>
@@ -250,18 +251,18 @@ const Inicio = () => {
             <div className='position'>
         <div className="nosotros-container">
           <div className="texto-container">
-          <p>En nuestro catálogo, ofrecemos una cuidadosa selección de marcas de la más alta calidad, respaldadas por fabricantes de renombre en Estados Unidos, Corea y otras regiones destacadas a nivel mundial.</p>
+          <p className='e'> En nuestro catálogo, ofrecemos una cuidadosa selección de marcas de la más alta calidad, respaldadas por fabricantes de renombre en Estados Unidos, Corea y otras regiones destacadas a nivel mundial.</p>
             <p>
               Trabajamos en estrecha colaboración con nuestros proveedores para garantizar que cada artículo en nuestro inventario represente lo mejor en innovación, calidad y fiabilidad. Ya sea que estés buscando piezas de repuesto o lubricantes, puedes confiar en que nuestro catálogo cuenta con las marcas líderes en la industria que satisfarán tus necesidades automotrices con excelencia y garantía.
             </p>
             <div className='linea2'></div>
-            <button className='boton'>
+            <button className='boton e'>
               
               <Link to="/contacto" className='button'>+ Info</Link>
               </button>
           </div>
           <div className='linea'></div>
-          <img className='img2' src={nosotrosImg} alt="" />
+          <img className='img2' src={frenis} alt="" />
         </div>
       </div>
 

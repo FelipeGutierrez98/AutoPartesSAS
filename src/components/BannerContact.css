@@ -1,0 +1,57 @@
+
+  
+  
+  .contacto button {
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 1em 1.5em;
+    margin: 10px;
+    border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .cont{
+    font-size: 35px;
+  }
+  .contacto button:hover {
+    background-color: #1f376c;
+    color: #fdfeff;
+  }
+  
+  .contacto button  {
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .contacto button:hover i {
+    color: black;
+  }
+  
+  @media screen and (max-width:800px) {
+    .contacto{
+        margin-top: 30px;
+    }
+    .cont{
+        font-size: 25px;
+      }
+    .contacto button  {
+        color: white;
+        font-size: 1rem;
+        transition: all 0.2s ease-in-out;
+      }
+  }
+  @media screen and (max-width:500px) {
+    .cont{
+        font-size: 23px;
+      }
+    .contacto button  {
+        color: white;
+        font-size: 0.8rem;
+        transition: all 0.2s ease-in-out;
+      }
+  }
+  /* Pie de pagina (footer) */
+  
+  

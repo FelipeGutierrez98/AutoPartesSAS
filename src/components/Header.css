@@ -1,4 +1,4 @@
-.navBar{
+/* .navBar{
   display: flex;
   background-color: transparent;
   align-items: center;
@@ -7,8 +7,9 @@
   font-family: 'Permanent Marker', cursive;
   list-style: none;
   background-color: #ffffff;
-}
-.links{
+} */
+
+/* .links{
   width: 70%;
   display: flex;
   color: #1f376c;
@@ -16,8 +17,8 @@ align-items: center;
 gap: 20px;
 font-size: 25px;
 
-}
-.cotiza {
+} */
+/* .cotiza {
   color: #ffffff !important;
   background-color: #1f376c;
   border: 1px solid #ef3f3f;
@@ -27,28 +28,28 @@ font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer; /* Asegura que el cursor cambie al pasar sobre el botón */
-  transition: all 0.3s ease; /* Agrega una transición suave a todos los cambios */
+  cursor: pointer; 
+  transition: all 0.3s ease;
 }
-
-.cotiza:hover {
+ */
+/* .cotiza:hover {
   color: #fff !important;
   background-color: #1f376c;
-  transform: scale(1.1); /* Escala el botón al 110% */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra al botón */
-}
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+} */
 
 
 /* Define la animación */
-@keyframes pulse {
+/* @keyframes pulse {
   0% {
-    transform: scale(1); /* Escala normal */
+    transform: scale(1); 
   }
   50% {
-    transform: scale(1.1); /* Escala al 110% */
+    transform: scale(1.1); 
   }
   100% {
-    transform: scale(1); /* Vuelve a la escala normal */
+    transform: scale(1); 
   }
 }
 
@@ -64,7 +65,7 @@ font-size: 25px;
 .logo{
   height: 100px;
   
-}
+} */
 
 /* .img{
     background-image: url('../src//assets//camion.jpeg');
@@ -76,3 +77,269 @@ font-size: 25px;
     z-index: 1;
    } 
  */
+
+
+/* header {
+  width: 100%;
+  margin: auto;
+  height: 120px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: transparent;;
+} */
+/*   max-width: 80%; */
+/* position: relative; */
+/* z-index: 100; */
+
+
+
+ 
+.logo {
+  height: 140px;
+  margin-right: 50px;
+  padding-top: 10px;
+}
+
+/* .links {
+  display: flex;
+  align-items: center;
+} */
+
+.linkUnidad {
+  margin-right: 100px; 
+  text-decoration: none!important;
+  color: #1f376c;
+  transition: color 0.3s; 
+  transform: scale(1.1);
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+  font-family: 'Permanent Marker', cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+  
+  
+}
+
+
+/* .linkUnidad:hover {
+  color: rgb(74, 68, 68);
+} */
+
+.linkUnidad:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #1f376c;;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.linkUnidad:hover:before {
+  transform: scaleX(1);
+}
+
+/* .navBar{
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around; 
+  font-family: 'Permanent Marker', cursive;
+  list-style: none;
+  background-color: #ffffff;
+} */
+/*  .links{
+  width: 70%;
+  display: flex;
+  color: #1f376c;
+  align-items: center;
+  
+  font-size: 25px;
+  
+}
+
+.logo{
+  height: 100px;
+  
+} */
+
+.animated-button {
+  background-color: transparent; /* Color de fondo */
+  color:#1f376c;; /* Color del texto */
+    padding: 10px 20px; /* Espaciado */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Aparecerá la mano al pasar */
+    transition: all 0.3s ease; /* Animación suave para cambios */
+    text-decoration: none;
+    border: 1px solid black;
+  }
+  
+  /* Efectos al pasar el mouse */
+  .animated-button:hover {
+    color: white;
+    background-color: #1f376c;;
+    transform: scale(1.1); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Efectos al presionar el botón */
+  .animated-button:active {
+    transform: scale(1.05); /* Disminuye el tamaño para efecto de clic */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Menor sombra al hacer clic */
+    background-color: #ffffff; /* Cambia el color de fondo */
+    color: rgb(0, 0, 0);
+  }
+  
+ 
+
+  @media (max-width: 1200px) {
+  
+  
+    .header {
+      /* Reduce la altura del header */
+      display: flex;
+      justify-content: space-between; /* Mantiene el espacio entre elementos */
+    }
+    .logo {
+      height: 100px;
+      margin-right: 40px;
+    }
+    
+    .linkUnidad {
+      margin-right: 50px; /* Espaciado entre enlaces */
+      text-decoration: none; /* Elimina el subrayado */
+      color: rgb(0, 0, 0); /* Establece el color del texto a negro */
+      transition: color 0.3s; /* Añade una transición para cambios de color */
+      transform: scale(1.1);
+      font-size: 20px;
+      text-align: center
+   
+      
+    }
+  }
+  @media (max-width: 720px) {
+    .header {
+      /* Reduce la altura del header */
+      display: flex;
+      justify-content: space-between; /* Mantiene el espacio entre elementos */
+    }
+    .logo {
+      height: 100px;
+      margin-right: 40px;
+    }
+    .linkUnidad {
+      margin-right: 40px; /* Espaciado entre enlaces */
+      text-decoration: none; /* Elimina el subrayado */
+      color: rgb(0, 0, 0); /* Establece el color del texto a negro */
+      transition: color 0.3s; /* Añade una transición para cambios de color */
+      transform: scale(1.1);
+      font-size: 25px;
+      
+      
+     
+      
+      
+    }
+  }
+    
+    @media (max-width:768px) {
+    .po{
+      height: 370px
+    }
+    
+    .linkUnidad {
+    margin-right: 100px; /* Espaciado entre enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    color: rgb(0, 0, 0); /* Establece el color del texto a negro */
+    transition: color 0.3s; /* Añade una transición para cambios de color */
+    transform: scale(1.1);
+    font-size: 27px;
+    text-align: center;
+    padding-top: 20px;
+    
+    
+    }
+    .basic-navbar-nav1{
+    width: 80px;
+    height: 60px
+    }
+    
+    .logo {
+    height: 140px;
+    margin-right: 180px;
+    padding-top: 10px;
+    }
+    
+    }
+  
+    @media (max-width:991px) {
+    .po{
+      height: 250px;
+      width: 100%;
+    }
+    
+    .linkUnidad {
+    margin-right: 100px; /* Espaciado entre enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    color: rgb(0, 0, 0); /* Establece el color del texto a negro */
+    transition: color 0.3s; /* Añade una transición para cambios de color */
+    transform: scale(1.1);
+    font-size: 25px;
+    text-align: center;
+    padding-top: 20px;
+     
+    
+    }
+    .basic-navbar-nav1{
+    width: 80px ;
+    height: 60px
+    }
+    
+    .logo {
+    height: 140px;
+    margin-right: 180px;
+    padding-top: 10px;
+    }
+    
+    }
+  
+  
+    @media (max-width:510px) {
+    .po{
+      height: 200px;
+      width: 100%;
+    
+    }
+    
+    .linkUnidad {
+    margin-right: 100px; /* Espaciado entre enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    color: rgb(0, 0, 0); /* Establece el color del texto a negro */
+    transition: color 0.3s; /* Añade una transición para cambios de color */
+    transform: scale(1.1);
+    font-size: 15px;
+    padding-top: 20px;
+    
+      margin:0 auto;
+    }
+    .basic-navbar-nav1{
+    width: 80px ;
+    height: 60px
+    }
+    
+    .logo {
+    height: 90px;
+    margin-right: 180px;
+    padding-top: 10px;
+    }
+    
+    }
+  

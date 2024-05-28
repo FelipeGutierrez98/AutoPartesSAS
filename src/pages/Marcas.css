@@ -94,3 +94,80 @@ h1{
   opacity: 1;
   transition: all ease 0.3s;
 }
+
+@media screen and (max-width:900px) {
+  
+
+.logo-container img {
+  
+  height: 100px;
+ /*  height: 75px;
+  object-fit: contain;
+  object-position: center; */
+  filter: grayscale(1);
+  opacity: 0.3;
+}
+
+.provedores{
+  color: white;
+  font-size: 60px;
+  font-family: 'Permanent Marker', cursive;
+}
+}
+@media screen and (max-width:760px) {
+  
+
+.logo-container img {
+  
+  height: 80px;
+ /*  height: 75px;
+  object-fit: contain;
+  object-position: center; */
+  filter: grayscale(1);
+  opacity: 0.3;
+}
+
+.provedores{
+  color: white;
+  font-size: 50px;
+  font-family: 'Permanent Marker', cursive;
+}
+}
+@media screen and (max-width:634px) {
+  
+
+.logo-container img {
+  
+  height: 70px;
+ /*  height: 75px;
+  object-fit: contain;
+  object-position: center; */
+  filter: grayscale(1);
+  opacity: 0.3;
+}
+
+.provedores{
+  color: white;
+  font-size: 40px;
+  font-family: 'Permanent Marker', cursive;
+}
+}
+@media screen and (max-width:534px) {
+  
+
+.logo-container img {
+  
+  height: 40px;
+ /*  height: 75px;
+  object-fit: contain;
+  object-position: center; */
+  filter: grayscale(1);
+  opacity: 0.3;
+}
+
+.provedores{
+  color: white;
+  font-size: 30px;
+  font-family: 'Permanent Marker', cursive;
+}
+}

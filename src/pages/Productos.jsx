@@ -4,6 +4,7 @@ import ProductList from '../components/ProductList'
 import Cart from '../components/Cart';
 import logo from '../assets/Copia de GEA-Photoroom.png-Photoroom.png'
 import nosotrosImg from '../../src/assets/repuesto.co-partes-circulo.png'
+import imgpro from '../assets/vector-car-parts-tire-isolated-600nw-1962329059-Photoroom.png-Photoroom.png'
 import './Productos.css'
 import motor from '../assets/motor.jpeg'
 import frenos from '../assets/frenos.jpeg'
@@ -37,13 +38,13 @@ const Productos = () => {
 
             <div className='position'>
                 <div className="nosotros-container">
-                    <img className='img2' src={nosotrosImg} alt="" />
+                    <img className='img2' src={imgpro} alt="" />
                     <div className='linea'></div>
                     <div className="texto-container">
                         <p>Ofrecemos una amplia gama de repuestos automotrices diseñados para satisfacer todas las necesidades de mantenimiento y reparación de vehículos. Desde filtros de aceite y frenos hasta correas de distribución y bujías, nuestra selección abarca todas las áreas críticas del automóvil. 
                         </p>
 
-                        <p>
+                        <p className='e'>
                         Ya sea que estés realizando un mantenimiento de rutina o reparando un problema específico, puedes confiar en nosotros para proporcionarte las piezas adecuadas para mantener tu vehículo funcionando de manera óptima. 
                         </p>
                         <div className='linea2'></div>

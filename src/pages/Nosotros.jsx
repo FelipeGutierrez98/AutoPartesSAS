@@ -1,6 +1,7 @@
 import React from 'react';
 import './Nosotros.css'
 import nosotrosImg from '../../src/assets/repuesto.co-partes-circulo.png'
+import cartPart from '../assets/partes-carro.png'
 import logo1 from '../assets/kia.png'
 import logo2 from '../assets/Chevrolet_logo.png'
 import logo3 from '../assets/479674a60c207959061a59789d4ea586-Photoroom.png-Photoroom.png'
@@ -40,7 +41,7 @@ const Nosotros = () => {
             En GEA, nos dedicamos apasionadamente a proporcionar soluciones integrales para las necesidades de repuestos automotrices. Con un compromiso inquebrantable hacia la calidad y la excelencia en el servicio al cliente, nos enorgullece ser líderes en la industria de distribución de partes de carros. 
           </p>
            
-          <p>
+          <p className='e'>
           Nuestro equipo altamente capacitado y experimentado se esfuerza por ofrecer una amplia gama de productos de la más alta calidad, asegurando así la satisfacción y confianza de nuestros clientes. 
           </p>
             <div className='linea2'></div>
@@ -68,7 +69,7 @@ const Nosotros = () => {
 
       </div>
       
-      <div className='position'>
+      <div className='position e'>
         <div className="nosotros-container">
           <div className="texto-container">
             <p className='px-3'>
@@ -81,7 +82,7 @@ const Nosotros = () => {
             </button>
           </div>
           <div className='linea'></div>
-          <img className='img2' src={nosotrosImg} alt="" />
+          <img className='img2' src={cartPart} alt="" />
         </div>
       </div>
     </div>
